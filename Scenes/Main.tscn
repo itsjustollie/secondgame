@@ -1,4 +1,4 @@
-[gd_scene load_steps=52 format=3 uid="uid://btspxe0fqidd1"]
+[gd_scene load_steps=57 format=3 uid="uid://btspxe0fqidd1"]
 
 [ext_resource type="Script" uid="uid://bd3alhuf38w7i" path="res://Scripts/power.gd" id="1_r150o"]
 [ext_resource type="Texture2D" uid="uid://btmwiu1a2mdsb" path="res://Assets/Tools/Charger/chargeon1.png" id="2_rgh2o"]
@@ -32,6 +32,9 @@
 [ext_resource type="Texture2D" uid="uid://dye4m7owt58h2" path="res://Assets/Robots/Stall/stall_error.png" id="26_c5snn"]
 [ext_resource type="Script" uid="uid://bs7i081x2mx7i" path="res://Scripts/stall.gd" id="26_xvtyr"]
 [ext_resource type="Script" uid="uid://cv5eibniiqt5m" path="res://Scripts/power_drain.gd" id="28_u7mjy"]
+[ext_resource type="AudioStream" uid="uid://cvahg6jld883q" path="res://Sound/Robots/Stall/error-03-125761.mp3" id="29_4yxf6"]
+[ext_resource type="Texture2D" uid="uid://cf3klouywnt8m" path="res://Assets/Robots/Stall/Stall_jumpscare.png" id="30_qta6b"]
+[ext_resource type="AudioStream" uid="uid://bueaxbshynnau" path="res://Sound/Robots/Stall/stall_jumpscare.mp3" id="31_x3rx7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jw32o"]
 atlas = ExtResource("2_rgh2o")
@@ -202,6 +205,21 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_x3rx7"]
+atlas = ExtResource("30_qta6b")
+region = Rect2(0, 0, 1000, 500)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6heos"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x3rx7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="Node2D" type="Node2D"]
 
 [node name="Power" type="Node" parent="."]
@@ -352,6 +370,20 @@ flat = true
 [node name="Power_drain" type="Node" parent="Robots/Stall"]
 script = ExtResource("28_u7mjy")
 
+[node name="ErSound" type="AudioStreamPlayer2D" parent="Robots/Stall"]
+stream = ExtResource("29_4yxf6")
+
+[node name="Stall_jumpscare" type="AnimatedSprite2D" parent="Robots/Stall"]
+visible = false
+z_index = 50
+position = Vector2(541, 369)
+scale = Vector2(1.162, 1.162)
+sprite_frames = SubResource("SpriteFrames_6heos")
+
+[node name="Stall_Jump" type="AudioStreamPlayer2D" parent="Robots/Stall"]
+stream = ExtResource("31_x3rx7")
+volume_db = 2.019
+
 [node name="Shock" type="Node" parent="."]
 script = ExtResource("20_fq0cl")
 
@@ -443,7 +475,6 @@ script = ExtResource("25_c4ay3")
 
 [connection signal="button_down" from="Power/Powersupply" to="Power" method="_on_powersupply_button_down"]
 [connection signal="button_up" from="Power/Powersupply" to="Power" method="_on_powersupply_button_up"]
-[connection signal="pressed" from="Power/Powersupply" to="Power" method="_on_powersupply_pressed"]
 [connection signal="button_down" from="Screen/ScreenButton" to="Screen" method="_on_screen_button_button_down"]
 [connection signal="button_up" from="Screen/ScreenButton" to="Screen" method="_on_screen_button_button_up"]
 [connection signal="pressed" from="Screen/ScreenButton" to="Power" method="_on_screen_button_pressed"]

@@ -31,6 +31,9 @@ func _process(delta: float) -> void:
 			charge_sprite.animation = "ON"
 	else:
 			charge_sprite.animation = "default"
+	
+	if power <= 0:
+		PowerDrain.poweroff = true
 			
 			
 
