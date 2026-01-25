@@ -1,0 +1,454 @@
+[gd_scene load_steps=51 format=3 uid="uid://btspxe0fqidd1"]
+
+[ext_resource type="Script" uid="uid://bd3alhuf38w7i" path="res://Scripts/power.gd" id="1_r150o"]
+[ext_resource type="Texture2D" uid="uid://btmwiu1a2mdsb" path="res://Assets/Tools/Charger/chargeon1.png" id="2_rgh2o"]
+[ext_resource type="Texture2D" uid="uid://se82gfijdrnh" path="res://Assets/Tools/Charger/chargeon2.png" id="3_pbw6q"]
+[ext_resource type="Texture2D" uid="uid://cpmfdqwmnc3d8" path="res://Assets/Tools/Charger/chargeoff.png" id="4_v1gob"]
+[ext_resource type="Texture2D" uid="uid://d2rsddiym5ss5" path="res://Assets/Tools/Screen/Screen.png" id="5_pbw6q"]
+[ext_resource type="Script" uid="uid://dj8jrsn5802dw" path="res://Scripts/screen.gd" id="5_v1gob"]
+[ext_resource type="Script" uid="uid://bvgu2g7pv4xn7" path="res://Scripts/screen_status.gd" id="7_jw32o"]
+[ext_resource type="Texture2D" uid="uid://wvq61doly7tr" path="res://Assets/Tools/Blink/blink.png" id="8_50glp"]
+[ext_resource type="Script" uid="uid://bxy2tl5q241fx" path="res://Scripts/blink.gd" id="8_vy5pj"]
+[ext_resource type="Script" uid="uid://b4ujlfkjd0f5c" path="res://Scripts/blink_status.gd" id="10_bmxlf"]
+[ext_resource type="Script" uid="uid://d0pw73dj3skgq" path="res://Scripts/false_human.gd" id="11_grg3l"]
+[ext_resource type="Texture2D" uid="uid://bel848hgwllf3" path="res://Assets/Robots/False_Human/False_Human_jumpscare.png" id="12_aht7i"]
+[ext_resource type="Texture2D" uid="uid://c4npokoci6fmd" path="res://Assets/Robots/False_Human/False_Human.png" id="12_frkhe"]
+[ext_resource type="AudioStream" uid="uid://dnyit2cpdvx72" path="res://Sound/Robots/False_Human/Leave (1).mp3" id="13_hwpts"]
+[ext_resource type="AudioStream" uid="uid://du2g1gyyqk0xh" path="res://Sound/Robots/False_Human/False_Breathing.mp3" id="14_1p5hy"]
+[ext_resource type="Script" uid="uid://gw3w6qgk4cla" path="res://Scripts/the_aware.gd" id="15_0sclb"]
+[ext_resource type="AudioStream" uid="uid://ceugkovaxj6rc" path="res://Sound/Robots/False_Human/false_jumpscare.mp3" id="16_5jffn"]
+[ext_resource type="Texture2D" uid="uid://csrwqcf8o1akf" path="res://Assets/Robots/The_Aware/aware_can't_see.png" id="16_sxkr1"]
+[ext_resource type="Texture2D" uid="uid://buy3t1glta6v5" path="res://Assets/Robots/The_Aware/aware_stage1.png" id="17_fq0cl"]
+[ext_resource type="Texture2D" uid="uid://c6miwachqxa6o" path="res://Assets/Robots/The_Aware/aware_stage2.png" id="18_hwpts"]
+[ext_resource type="Texture2D" uid="uid://bx6axnihvvkx7" path="res://Assets/Robots/The_Aware/aware_stage3.png" id="19_jyqft"]
+[ext_resource type="Script" uid="uid://njcinqu7grh4" path="res://Scripts/shock.gd" id="20_fq0cl"]
+[ext_resource type="Texture2D" uid="uid://wvqptmabswmn" path="res://Assets/Robots/The_Aware/aware_shocked.png" id="20_hwpts"]
+[ext_resource type="Script" uid="uid://djn6lfuq668jw" path="res://Scripts/shock_status.gd" id="21_hwpts"]
+[ext_resource type="AudioStream" uid="uid://dvx3wl3ob8low" path="res://Sound/Robots/The_Aware/aware_shocked.mp3" id="21_jyqft"]
+[ext_resource type="Script" uid="uid://de6jmf5hqkgxr" path="res://Scripts/downloads.gd" id="24_3tgeq"]
+[ext_resource type="Texture2D" uid="uid://bc7bu80uhwyf3" path="res://Assets/Robots/The_Aware/Aware_jumpscare.png" id="24_kpo4j"]
+[ext_resource type="AudioStream" uid="uid://dhgtv2kniffcq" path="res://Sound/Robots/The_Aware/aware_jumpscare.mp3" id="25_4n42c"]
+[ext_resource type="Script" uid="uid://c3tm8hswsqwl4" path="res://Scripts/tasks.gd" id="25_c4ay3"]
+[ext_resource type="Texture2D" uid="uid://dye4m7owt58h2" path="res://Assets/Robots/Stall/stall_error.png" id="26_c5snn"]
+[ext_resource type="Script" uid="uid://bs7i081x2mx7i" path="res://Scenes/stall.gd" id="26_xvtyr"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jw32o"]
+atlas = ExtResource("2_rgh2o")
+region = Rect2(0, 0, 1000, 1000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_50glp"]
+atlas = ExtResource("3_pbw6q")
+region = Rect2(0, 0, 1000, 1000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vy5pj"]
+atlas = ExtResource("4_v1gob")
+region = Rect2(0, 0, 1000, 1000)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bmxlf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jw32o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_50glp")
+}],
+"loop": true,
+"name": &"ON",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vy5pj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v1gob"]
+atlas = ExtResource("5_pbw6q")
+region = Rect2(0, 0, 1000, 700)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jw32o"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v1gob")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bmxlf"]
+atlas = ExtResource("8_50glp")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4kpch"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bmxlf")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kpo4j"]
+atlas = ExtResource("12_aht7i")
+region = Rect2(0, 0, 1000, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1p5hy"]
+atlas = ExtResource("12_frkhe")
+region = Rect2(0, 0, 1000, 500)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_h1m7h"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kpo4j")
+}],
+"loop": true,
+"name": &"Jumpscare",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1p5hy")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3tgeq"]
+atlas = ExtResource("16_sxkr1")
+region = Rect2(0, 0, 1000, 1000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c4ay3"]
+atlas = ExtResource("17_fq0cl")
+region = Rect2(0, 0, 1000, 1000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_aht7i"]
+atlas = ExtResource("18_hwpts")
+region = Rect2(0, 0, 1000, 1000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5jffn"]
+atlas = ExtResource("19_jyqft")
+region = Rect2(0, 0, 1000, 1000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hwpts"]
+atlas = ExtResource("20_hwpts")
+region = Rect2(0, 0, 1000, 1000)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_kpo4j"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3tgeq")
+}],
+"loop": true,
+"name": &"Hide",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c4ay3")
+}],
+"loop": true,
+"name": &"Stage1",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_aht7i")
+}],
+"loop": true,
+"name": &"Stage2",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5jffn")
+}],
+"loop": true,
+"name": &"Stage3",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hwpts")
+}],
+"loop": true,
+"name": &"aware_shocked",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4n42c"]
+atlas = ExtResource("24_kpo4j")
+region = Rect2(0, 0, 1000, 500)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5jffn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4n42c")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Power" type="Node" parent="."]
+script = ExtResource("1_r150o")
+
+[node name="Powersupply" type="Button" parent="Power"]
+z_index = 50
+offset_left = 31.0
+offset_top = 192.0
+offset_right = 200.0
+offset_bottom = 421.0
+theme_override_colors/font_color = Color(0.8745098, 0.8745098, 0.8745098, 0)
+theme_override_colors/font_focus_color = Color(0.9490196, 0.9490196, 0.9490196, 1)
+
+[node name="ChargeSprite" type="AnimatedSprite2D" parent="Power/Powersupply"]
+position = Vector2(101.99999, 119.00003)
+scale = Vector2(0.32400003, 0.32400003)
+sprite_frames = SubResource("SpriteFrames_bmxlf")
+autoplay = "default"
+
+[node name="Panel" type="Panel" parent="Power"]
+offset_right = 170.0
+offset_bottom = 55.0
+
+[node name="Powerlabel" type="Label" parent="Power/Panel"]
+z_index = 600
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -66.0
+offset_top = -17.5
+offset_right = 66.0
+offset_bottom = 17.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 25
+text = "Power: 100"
+
+[node name="Screen" type="Node" parent="."]
+script = ExtResource("5_v1gob")
+
+[node name="ScreenSprite" type="AnimatedSprite2D" parent="Screen"]
+visible = false
+z_index = 100
+position = Vector2(564, 373.00003)
+scale = Vector2(1.031786, 1.0317857)
+sprite_frames = SubResource("SpriteFrames_jw32o")
+autoplay = "default"
+
+[node name="ScreenButton" type="Button" parent="Screen"]
+z_index = 120
+offset_left = 356.0
+offset_top = 573.0
+offset_right = 784.0
+offset_bottom = 626.0
+text = "Screen
+"
+
+[node name="ScreenStatus" type="Node" parent="."]
+script = ExtResource("7_jw32o")
+
+[node name="Blink" type="Node" parent="."]
+script = ExtResource("8_vy5pj")
+
+[node name="BlinkButton" type="Button" parent="Blink"]
+z_index = 500
+offset_left = 1035.0
+offset_top = 552.0
+offset_right = 1115.6604
+offset_bottom = 627.0
+text = "blink
+"
+
+[node name="BlinkSprite" type="AnimatedSprite2D" parent="Blink"]
+visible = false
+z_index = 450
+position = Vector2(602, 350)
+scale = Vector2(14.162498, 8.197499)
+sprite_frames = SubResource("SpriteFrames_4kpch")
+
+[node name="BlinkStatus" type="Node" parent="."]
+script = ExtResource("10_bmxlf")
+
+[node name="Robots" type="Node" parent="."]
+
+[node name="FalseHuman" type="Node" parent="Robots"]
+script = ExtResource("11_grg3l")
+
+[node name="FalseSprite" type="AnimatedSprite2D" parent="Robots/FalseHuman"]
+z_index = 50
+position = Vector2(669, 349.99997)
+scale = Vector2(1.2179999, 1.2179999)
+sprite_frames = SubResource("SpriteFrames_h1m7h")
+autoplay = "default"
+
+[node name="Leave" type="AudioStreamPlayer2D" parent="Robots/FalseHuman"]
+position = Vector2(593, 436)
+stream = ExtResource("13_hwpts")
+
+[node name="Breathing" type="AudioStreamPlayer2D" parent="Robots/FalseHuman"]
+position = Vector2(591, 435)
+stream = ExtResource("14_1p5hy")
+volume_db = -3.794
+
+[node name="Scream" type="AudioStreamPlayer2D" parent="Robots/FalseHuman"]
+stream = ExtResource("16_5jffn")
+
+[node name="TheAware" type="Node" parent="Robots"]
+script = ExtResource("15_0sclb")
+
+[node name="AwareSprite" type="AnimatedSprite2D" parent="Robots/TheAware"]
+position = Vector2(570, 312)
+scale = Vector2(0.5244999, 0.5244999)
+sprite_frames = SubResource("SpriteFrames_kpo4j")
+animation = &"Hide"
+autoplay = "Hide"
+
+[node name="AwareShocked" type="AudioStreamPlayer2D" parent="Robots/TheAware"]
+stream = ExtResource("21_jyqft")
+
+[node name="Aware_Jumpscare" type="AnimatedSprite2D" parent="Robots/TheAware"]
+visible = false
+z_index = 50
+position = Vector2(599.00006, 355.00003)
+scale = Vector2(1.198, 1.198)
+sprite_frames = SubResource("SpriteFrames_5jffn")
+
+[node name="Aware_Jumpscaresound" type="AudioStreamPlayer2D" parent="Robots/TheAware"]
+stream = ExtResource("25_4n42c")
+
+[node name="Stall" type="Node" parent="Robots"]
+script = ExtResource("26_xvtyr")
+
+[node name="error1" type="Button" parent="Robots/Stall"]
+z_index = 120
+offset_left = 326.0
+offset_top = 25.0
+offset_right = 734.0
+offset_bottom = 433.0
+icon = ExtResource("26_c5snn")
+flat = true
+
+[node name="Shock" type="Node" parent="."]
+script = ExtResource("20_fq0cl")
+
+[node name="ShockButton" type="Button" parent="Shock"]
+offset_left = 839.0
+offset_top = 278.0
+offset_right = 909.0
+offset_bottom = 373.0
+text = "shock"
+
+[node name="ShockStatus" type="Node" parent="."]
+script = ExtResource("21_hwpts")
+
+[node name="Downloads" type="Node" parent="."]
+script = ExtResource("24_3tgeq")
+
+[node name="File 1" type="Button" parent="Downloads"]
+visible = false
+z_index = 120
+offset_left = 134.0
+offset_top = 206.0
+offset_right = 311.0
+offset_bottom = 270.0
+text = "File 1"
+
+[node name="F1process" type="Label" parent="Downloads/File 1"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -11.5
+offset_bottom = 11.5
+grow_horizontal = 0
+grow_vertical = 2
+text = "0%"
+
+[node name="File 2" type="Button" parent="Downloads"]
+visible = false
+z_index = 120
+offset_left = 134.0
+offset_top = 300.0
+offset_right = 311.0
+offset_bottom = 364.0
+text = "File 2
+"
+
+[node name="F2 process" type="Label" parent="Downloads/File 2"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -11.5
+offset_bottom = 11.5
+grow_horizontal = 0
+grow_vertical = 2
+text = "0%"
+
+[node name="File 3" type="Button" parent="Downloads"]
+visible = false
+z_index = 120
+offset_left = 134.0
+offset_top = 390.0
+offset_right = 311.0
+offset_bottom = 454.0
+text = "File 3"
+
+[node name="F3 process" type="Label" parent="Downloads/File 3"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -11.5
+offset_bottom = 11.5
+grow_horizontal = 0
+grow_vertical = 2
+text = "0%"
+
+[node name="Tasks" type="Node" parent="."]
+script = ExtResource("25_c4ay3")
+
+[connection signal="button_down" from="Power/Powersupply" to="Power" method="_on_powersupply_button_down"]
+[connection signal="button_up" from="Power/Powersupply" to="Power" method="_on_powersupply_button_up"]
+[connection signal="pressed" from="Power/Powersupply" to="Power" method="_on_powersupply_pressed"]
+[connection signal="button_down" from="Screen/ScreenButton" to="Screen" method="_on_screen_button_button_down"]
+[connection signal="button_up" from="Screen/ScreenButton" to="Screen" method="_on_screen_button_button_up"]
+[connection signal="pressed" from="Screen/ScreenButton" to="Power" method="_on_screen_button_pressed"]
+[connection signal="pressed" from="Screen/ScreenButton" to="Screen" method="_on_screen_button_pressed"]
+[connection signal="pressed" from="Blink/BlinkButton" to="Blink" method="_on_blink_button_pressed"]
+[connection signal="pressed" from="Shock/ShockButton" to="Shock" method="_on_shock_button_pressed"]
+[connection signal="pressed" from="Shock/ShockButton" to="Shock/ShockButton" method="_on_pressed"]
+[connection signal="button_down" from="Downloads/File 1" to="Downloads" method="_on_file_1_button_down"]
+[connection signal="button_up" from="Downloads/File 1" to="Power" method="_on_file_1_button_up"]
+[connection signal="button_up" from="Downloads/File 1" to="Downloads" method="_on_file_1_button_up"]
+[connection signal="button_down" from="Downloads/File 2" to="Downloads" method="_on_file_2_button_down"]
+[connection signal="button_up" from="Downloads/File 2" to="Downloads" method="_on_file_2_button_up"]
+[connection signal="button_down" from="Downloads/File 3" to="Downloads" method="_on_file_3_button_down"]
+[connection signal="button_up" from="Downloads/File 3" to="Downloads" method="_on_file_3_button_up"]

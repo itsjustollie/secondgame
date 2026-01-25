@@ -1,0 +1,128 @@
+[gd_scene load_steps=14 format=3 uid="uid://btspxe0fqidd1"]
+
+[ext_resource type="Script" uid="uid://bd3alhuf38w7i" path="res://Scripts/power.gd" id="1_r150o"]
+[ext_resource type="Texture2D" uid="uid://btmwiu1a2mdsb" path="res://Assets/tools/Charger/chargeon1.png" id="2_rgh2o"]
+[ext_resource type="Texture2D" uid="uid://se82gfijdrnh" path="res://Assets/tools/Charger/chargeon2.png" id="3_pbw6q"]
+[ext_resource type="Texture2D" uid="uid://cpmfdqwmnc3d8" path="res://Assets/tools/Charger/chargeoff.png" id="4_v1gob"]
+[ext_resource type="Texture2D" uid="uid://d2rsddiym5ss5" path="res://Assets/tools/Screen/Screen.png" id="5_pbw6q"]
+[ext_resource type="Script" uid="uid://dj8jrsn5802dw" path="res://Scripts/screen.gd" id="5_v1gob"]
+[ext_resource type="Script" uid="uid://bvgu2g7pv4xn7" path="res://Scripts/screen_status.gd" id="7_jw32o"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jw32o"]
+atlas = ExtResource("2_rgh2o")
+region = Rect2(0, 0, 1000, 1000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_50glp"]
+atlas = ExtResource("3_pbw6q")
+region = Rect2(0, 0, 1000, 1000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vy5pj"]
+atlas = ExtResource("4_v1gob")
+region = Rect2(0, 0, 1000, 1000)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bmxlf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jw32o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_50glp")
+}],
+"loop": true,
+"name": &"ON",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vy5pj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v1gob"]
+atlas = ExtResource("5_pbw6q")
+region = Rect2(0, 0, 1000, 700)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jw32o"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v1gob")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Power" type="Node" parent="."]
+script = ExtResource("1_r150o")
+
+[node name="Powersupply" type="Button" parent="Power"]
+z_index = 50
+offset_left = 31.0
+offset_top = 192.0
+offset_right = 200.0
+offset_bottom = 421.0
+theme_override_colors/font_color = Color(0.8745098, 0.8745098, 0.8745098, 0)
+theme_override_colors/font_focus_color = Color(0.9490196, 0.9490196, 0.9490196, 1)
+
+[node name="ChargeSprite" type="AnimatedSprite2D" parent="Power/Powersupply"]
+position = Vector2(101.99999, 119.00003)
+scale = Vector2(0.32400003, 0.32400003)
+sprite_frames = SubResource("SpriteFrames_bmxlf")
+autoplay = "default"
+
+[node name="Panel" type="Panel" parent="Power"]
+offset_right = 170.0
+offset_bottom = 55.0
+
+[node name="Powerlabel" type="Label" parent="Power/Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -42.5
+offset_top = -11.5
+offset_right = 42.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 25
+text = "Power: 100"
+
+[node name="Screen" type="Node" parent="."]
+script = ExtResource("5_v1gob")
+
+[node name="ScreenSprite" type="AnimatedSprite2D" parent="Screen"]
+z_index = 100
+position = Vector2(569, 369)
+scale = Vector2(1.0064287, 1.0064286)
+sprite_frames = SubResource("SpriteFrames_jw32o")
+autoplay = "default"
+
+[node name="ScreenButton" type="Button" parent="Screen"]
+z_index = 120
+offset_left = 356.0
+offset_top = 573.0
+offset_right = 784.0
+offset_bottom = 626.0
+text = "Screen
+"
+
+[node name="ScreenStatus" type="Node" parent="."]
+script = ExtResource("7_jw32o")
+
+[connection signal="button_down" from="Power/Powersupply" to="Power" method="_on_powersupply_button_down"]
+[connection signal="button_up" from="Power/Powersupply" to="Power" method="_on_powersupply_button_up"]
+[connection signal="pressed" from="Power/Powersupply" to="Power" method="_on_powersupply_pressed"]
+[connection signal="button_down" from="Screen/ScreenButton" to="Screen" method="_on_screen_button_button_down"]
+[connection signal="button_up" from="Screen/ScreenButton" to="Screen" method="_on_screen_button_button_up"]
+[connection signal="pressed" from="Screen/ScreenButton" to="Power" method="_on_screen_button_pressed"]
+[connection signal="pressed" from="Screen/ScreenButton" to="Screen" method="_on_screen_button_pressed"]
