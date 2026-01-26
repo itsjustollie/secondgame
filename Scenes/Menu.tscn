@@ -1,0 +1,38 @@
+[gd_scene load_steps=3 format=3 uid="uid://c827wxlkp0804"]
+
+[ext_resource type="Script" uid="uid://docyhskyspn8f" path="res://Scripts/levels.gd" id="1_3kf3n"]
+[ext_resource type="Script" uid="uid://cj213oggavcet" path="res://Scenes/aggresion.gd" id="2_6pedr"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Levels" type="Node" parent="."]
+script = ExtResource("1_3kf3n")
+
+[node name="h0" type="Button" parent="Levels"]
+offset_left = 106.0
+offset_top = 68.0
+offset_right = 278.0
+offset_bottom = 137.0
+text = "Hour 0"
+metadata/_edit_use_anchors_ = true
+
+[node name="h3" type="Button" parent="Levels"]
+offset_left = 106.0
+offset_top = 209.0
+offset_right = 278.0
+offset_bottom = 278.0
+text = "Hour 3"
+
+[node name="h5" type="Button" parent="Levels"]
+offset_left = 106.0
+offset_top = 369.0
+offset_right = 278.0
+offset_bottom = 438.0
+text = "Hour 5"
+
+[node name="Aggresion" type="Node" parent="."]
+script = ExtResource("2_6pedr")
+
+[connection signal="pressed" from="Levels/h0" to="Levels" method="_on_h_0_pressed"]
+[connection signal="pressed" from="Levels/h3" to="Levels" method="_on_h_3_pressed"]
+[connection signal="pressed" from="Levels/h5" to="Levels" method="_on_h_5_pressed"]

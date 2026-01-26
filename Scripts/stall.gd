@@ -8,11 +8,12 @@ extends Node
 var time := 0.0
 var move_chance := 0
 var attack := false
-var aggresion := 3
+var aggresion := 0
 var pause := 0.0
 
 func _ready() -> void:
 	error_1.hide()
+	aggresion = Aggresion.stall_ag
 
 func _process(delta: float) -> void:
 	
@@ -25,7 +26,7 @@ func _process(delta: float) -> void:
 		
 	
 	time += delta
-	if time >= 8.0 and attack == false:
+	if time >= 10.0 and attack == false:
 		move_chance = (randi_range(1, aggresion))
 		if move_chance == 1:
 			attack = true

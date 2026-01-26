@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Second_game"
-run/main_scene="uid://btspxe0fqidd1"
+run/main_scene="uid://c827wxlkp0804"
 config/features=PackedStringArray("4.5", "Mobile")
 config/icon="res://Assets/UI/icon.svg"
 
@@ -23,6 +23,13 @@ ShockStatus="*res://Scripts/shock_status.gd"
 Tasks="*res://Scripts/tasks.gd"
 PowerDrain="*res://Scripts/power_drain.gd"
 Heating="*res://Scripts/heating.gd"
+Aggresion="*res://Scenes/aggresion.gd"
+
+[display]
+
+window/size/mode=3
+window/size/borderless=true
+window/stretch/mode="canvas_items"
 
 [input]
 

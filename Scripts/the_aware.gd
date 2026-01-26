@@ -14,8 +14,10 @@ var stage = "Stage1"
 var wait = 0.0
 var pause = false
 var jumpscare_time = 0.0
-const aggresion := 6
+var aggresion := 0
 
+func _ready() -> void:
+	aggresion = Aggresion.aware_ag
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -27,7 +29,7 @@ func _process(delta: float) -> void:
 		aware_sprite.animation = "Hide"
 		
 	time += delta
-	if time >= 6.0 and attack == false:
+	if time >= 7.0 and attack == false:
 		move_chance = (randi_range(1, aggresion))
 		if move_chance == 1:
 			if stage == "Stage1":

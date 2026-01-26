@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://4ycr7oqpy14f"]
+[gd_scene load_steps=2 format=3 uid="uid://4ycr7oqpy14f"]
+
+[ext_resource type="Script" uid="uid://dl2du0w1cmhs7" path="res://Scenes/back.gd" id="1_3vusp"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -9,3 +11,16 @@ offset_right = 229.0
 offset_bottom = 104.0
 text = "you win lamo
 "
+
+[node name="back" type="Node" parent="."]
+script = ExtResource("1_3vusp")
+
+[node name="backButton" type="Button" parent="back"]
+offset_left = 166.0
+offset_top = 160.0
+offset_right = 444.0
+offset_bottom = 305.0
+text = "back
+"
+
+[connection signal="pressed" from="back/backButton" to="back" method="_on_back_button_pressed"]

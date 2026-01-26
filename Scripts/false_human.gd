@@ -12,13 +12,13 @@ var attack := false
 var wait := false
 var kill_time := 0
 var jumpscare_time := 0.0
-const aggresion := 5
+var aggresion := 0
 
 
 
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	false_sprite.hide()
+func _ready():
+	aggresion = Aggresion.false_ag
+
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://fwc051rudbyy"]
+[gd_scene load_steps=2 format=3 uid="uid://fwc051rudbyy"]
+
+[ext_resource type="Script" uid="uid://bod51vnxalyxi" path="res://Scenes/retry.gd" id="1_jfeu1"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -8,3 +10,16 @@ offset_top = 118.0
 offset_right = 249.0
 offset_bottom = 141.0
 text = "YOU DIED LAMO"
+
+[node name="Retry" type="Node" parent="."]
+script = ExtResource("1_jfeu1")
+
+[node name="retryButton" type="Button" parent="Retry"]
+offset_left = 267.0
+offset_top = 166.0
+offset_right = 412.0
+offset_bottom = 213.0
+text = "retry
+"
+
+[connection signal="pressed" from="Retry/retryButton" to="Retry" method="_on_retry_button_pressed"]

@@ -13,7 +13,7 @@ var wait := false
 var kill_time := 0
 var jumpscare_time := 0.0
 var HeatTime := 0.0
-const aggresion := 2
+var aggresion := 0
 
 
 
@@ -22,6 +22,7 @@ func _ready() -> void:
 	crooked_sprite.hide()
 	heat_button.hide()
 	fan.hide()
+	aggresion = Aggresion.crook_ag
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.

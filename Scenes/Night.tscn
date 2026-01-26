@@ -1,59 +1,59 @@
 [gd_scene load_steps=73 format=3 uid="uid://btspxe0fqidd1"]
 
-[ext_resource type="Script" uid="uid://bd3alhuf38w7i" path="res://Scripts/power.gd" id="1_r150o"]
-[ext_resource type="Script" uid="uid://crj28w3fh4vvr" path="res://Scripts/heating.gd" id="1_vs04g"]
-[ext_resource type="Texture2D" uid="uid://btmwiu1a2mdsb" path="res://Assets/Tools/Charger/chargeon1.png" id="2_rgh2o"]
-[ext_resource type="Texture2D" uid="uid://se82gfijdrnh" path="res://Assets/Tools/Charger/chargeon2.png" id="3_pbw6q"]
-[ext_resource type="Texture2D" uid="uid://cpmfdqwmnc3d8" path="res://Assets/Tools/Charger/chargeoff.png" id="4_v1gob"]
-[ext_resource type="Texture2D" uid="uid://d2rsddiym5ss5" path="res://Assets/Tools/Screen/Screen.png" id="5_pbw6q"]
-[ext_resource type="Script" uid="uid://dj8jrsn5802dw" path="res://Scripts/screen.gd" id="5_v1gob"]
-[ext_resource type="Script" uid="uid://bvgu2g7pv4xn7" path="res://Scripts/screen_status.gd" id="7_jw32o"]
-[ext_resource type="Texture2D" uid="uid://wvq61doly7tr" path="res://Assets/Tools/Blink/blink.png" id="8_50glp"]
-[ext_resource type="Script" uid="uid://bxy2tl5q241fx" path="res://Scripts/blink.gd" id="8_vy5pj"]
-[ext_resource type="Script" uid="uid://b4ujlfkjd0f5c" path="res://Scripts/blink_status.gd" id="10_bmxlf"]
-[ext_resource type="Script" uid="uid://d0pw73dj3skgq" path="res://Scripts/false_human.gd" id="11_grg3l"]
-[ext_resource type="Texture2D" uid="uid://bel848hgwllf3" path="res://Assets/Robots/False_Human/False_Human_jumpscare.png" id="12_aht7i"]
-[ext_resource type="Texture2D" uid="uid://c4npokoci6fmd" path="res://Assets/Robots/False_Human/False_Human.png" id="12_frkhe"]
-[ext_resource type="AudioStream" uid="uid://dnyit2cpdvx72" path="res://Sound/Robots/False_Human/Leave (1).mp3" id="13_hwpts"]
-[ext_resource type="AudioStream" uid="uid://du2g1gyyqk0xh" path="res://Sound/Robots/False_Human/False_Breathing.mp3" id="14_1p5hy"]
-[ext_resource type="Script" uid="uid://gw3w6qgk4cla" path="res://Scripts/the_aware.gd" id="15_0sclb"]
-[ext_resource type="AudioStream" uid="uid://ceugkovaxj6rc" path="res://Sound/Robots/False_Human/false_jumpscare.mp3" id="16_5jffn"]
-[ext_resource type="Texture2D" uid="uid://csrwqcf8o1akf" path="res://Assets/Robots/The_Aware/aware_can't_see.png" id="16_sxkr1"]
-[ext_resource type="Texture2D" uid="uid://buy3t1glta6v5" path="res://Assets/Robots/The_Aware/aware_stage1.png" id="17_fq0cl"]
-[ext_resource type="Texture2D" uid="uid://c6miwachqxa6o" path="res://Assets/Robots/The_Aware/aware_stage2.png" id="18_hwpts"]
-[ext_resource type="Texture2D" uid="uid://bx6axnihvvkx7" path="res://Assets/Robots/The_Aware/aware_stage3.png" id="19_jyqft"]
-[ext_resource type="Script" uid="uid://njcinqu7grh4" path="res://Scripts/shock.gd" id="20_fq0cl"]
-[ext_resource type="Texture2D" uid="uid://wvqptmabswmn" path="res://Assets/Robots/The_Aware/aware_shocked.png" id="20_hwpts"]
-[ext_resource type="Script" uid="uid://djn6lfuq668jw" path="res://Scripts/shock_status.gd" id="21_hwpts"]
-[ext_resource type="AudioStream" uid="uid://dvx3wl3ob8low" path="res://Sound/Robots/The_Aware/aware_shocked.mp3" id="21_jyqft"]
-[ext_resource type="Script" uid="uid://de6jmf5hqkgxr" path="res://Scripts/downloads.gd" id="24_3tgeq"]
-[ext_resource type="Texture2D" uid="uid://bc7bu80uhwyf3" path="res://Assets/Robots/The_Aware/Aware_jumpscare.png" id="24_kpo4j"]
-[ext_resource type="AudioStream" uid="uid://dhgtv2kniffcq" path="res://Sound/Robots/The_Aware/aware_jumpscare.mp3" id="25_4n42c"]
-[ext_resource type="Script" uid="uid://c3tm8hswsqwl4" path="res://Scripts/tasks.gd" id="25_c4ay3"]
-[ext_resource type="Texture2D" uid="uid://dye4m7owt58h2" path="res://Assets/Robots/Stall/stall_error.png" id="26_c5snn"]
-[ext_resource type="Script" uid="uid://bs7i081x2mx7i" path="res://Scripts/stall.gd" id="26_xvtyr"]
-[ext_resource type="Script" uid="uid://cv5eibniiqt5m" path="res://Scripts/power_drain.gd" id="28_u7mjy"]
-[ext_resource type="AudioStream" uid="uid://cvahg6jld883q" path="res://Sound/Robots/Stall/error-03-125761.mp3" id="29_4yxf6"]
-[ext_resource type="Texture2D" uid="uid://cf3klouywnt8m" path="res://Assets/Robots/Stall/Stall_jumpscare.png" id="30_qta6b"]
-[ext_resource type="AudioStream" uid="uid://bueaxbshynnau" path="res://Sound/Robots/Stall/stall_jumpscare.mp3" id="31_x3rx7"]
-[ext_resource type="Texture2D" uid="uid://ipdal8vris1y" path="res://Assets/Robots/Crooked/Crooked_gone.png" id="32_6heos"]
-[ext_resource type="Script" uid="uid://357igas760ux" path="res://Scripts/crooked.gd" id="32_btbly"]
-[ext_resource type="Texture2D" uid="uid://bl8k6fuwxlstd" path="res://Assets/Robots/Crooked/Crooked_appear.png" id="32_vvnwx"]
-[ext_resource type="Texture2D" uid="uid://yo2saek4dr5i" path="res://Assets/Tools/Fan/fanoff.png" id="36_utia5"]
-[ext_resource type="Texture2D" uid="uid://jylb1sd53cvg" path="res://Assets/Tools/Fan/fanon.png" id="37_f7hdo"]
-[ext_resource type="Texture2D" uid="uid://chnpg4x8ncy4x" path="res://Assets/Robots/Crooked/crooked_jumpscare.png" id="38_clvyn"]
-[ext_resource type="AudioStream" uid="uid://dgbnvcxktq4di" path="res://Sound/Robots/Crooked/crooked_jumpscare.mp3" id="39_d8m2u"]
+[ext_resource type="Script" uid="uid://crj28w3fh4vvr" path="res://Scripts/heating.gd" id="1_d0ro7"]
+[ext_resource type="Script" uid="uid://bd3alhuf38w7i" path="res://Scripts/power.gd" id="2_uwk6c"]
+[ext_resource type="Texture2D" uid="uid://btmwiu1a2mdsb" path="res://Assets/Tools/Charger/chargeon1.png" id="3_k7xkd"]
+[ext_resource type="Texture2D" uid="uid://se82gfijdrnh" path="res://Assets/Tools/Charger/chargeon2.png" id="4_64id4"]
+[ext_resource type="Texture2D" uid="uid://cpmfdqwmnc3d8" path="res://Assets/Tools/Charger/chargeoff.png" id="5_l7y8l"]
+[ext_resource type="Script" uid="uid://dj8jrsn5802dw" path="res://Scripts/screen.gd" id="6_qupvh"]
+[ext_resource type="Texture2D" uid="uid://d2rsddiym5ss5" path="res://Assets/Tools/Screen/Screen.png" id="7_75tmy"]
+[ext_resource type="Script" uid="uid://bvgu2g7pv4xn7" path="res://Scripts/screen_status.gd" id="8_637a8"]
+[ext_resource type="Script" uid="uid://bxy2tl5q241fx" path="res://Scripts/blink.gd" id="9_w3en0"]
+[ext_resource type="Texture2D" uid="uid://wvq61doly7tr" path="res://Assets/Tools/Blink/blink.png" id="10_jkcd8"]
+[ext_resource type="Script" uid="uid://b4ujlfkjd0f5c" path="res://Scripts/blink_status.gd" id="11_hb331"]
+[ext_resource type="Script" uid="uid://d0pw73dj3skgq" path="res://Scripts/false_human.gd" id="12_hh621"]
+[ext_resource type="Texture2D" uid="uid://bel848hgwllf3" path="res://Assets/Robots/False_Human/False_Human_jumpscare.png" id="13_jhnia"]
+[ext_resource type="Texture2D" uid="uid://c4npokoci6fmd" path="res://Assets/Robots/False_Human/False_Human.png" id="14_2m4s1"]
+[ext_resource type="AudioStream" uid="uid://dnyit2cpdvx72" path="res://Sound/Robots/False_Human/Leave (1).mp3" id="15_iu7dq"]
+[ext_resource type="AudioStream" uid="uid://du2g1gyyqk0xh" path="res://Sound/Robots/False_Human/False_Breathing.mp3" id="16_wahdi"]
+[ext_resource type="AudioStream" uid="uid://ceugkovaxj6rc" path="res://Sound/Robots/False_Human/false_jumpscare.mp3" id="17_lwyey"]
+[ext_resource type="Script" uid="uid://gw3w6qgk4cla" path="res://Scripts/the_aware.gd" id="18_1cppf"]
+[ext_resource type="Texture2D" uid="uid://csrwqcf8o1akf" path="res://Assets/Robots/The_Aware/aware_can't_see.png" id="19_mab3i"]
+[ext_resource type="Texture2D" uid="uid://buy3t1glta6v5" path="res://Assets/Robots/The_Aware/aware_stage1.png" id="20_1tg7v"]
+[ext_resource type="Texture2D" uid="uid://c6miwachqxa6o" path="res://Assets/Robots/The_Aware/aware_stage2.png" id="21_20x37"]
+[ext_resource type="Texture2D" uid="uid://bx6axnihvvkx7" path="res://Assets/Robots/The_Aware/aware_stage3.png" id="22_qbdne"]
+[ext_resource type="Texture2D" uid="uid://wvqptmabswmn" path="res://Assets/Robots/The_Aware/aware_shocked.png" id="23_63cb6"]
+[ext_resource type="AudioStream" uid="uid://dvx3wl3ob8low" path="res://Sound/Robots/The_Aware/aware_shocked.mp3" id="24_576as"]
+[ext_resource type="Texture2D" uid="uid://bc7bu80uhwyf3" path="res://Assets/Robots/The_Aware/Aware_jumpscare.png" id="25_6bhsf"]
+[ext_resource type="AudioStream" uid="uid://dhgtv2kniffcq" path="res://Sound/Robots/The_Aware/aware_jumpscare.mp3" id="26_yunic"]
+[ext_resource type="Script" uid="uid://bs7i081x2mx7i" path="res://Scripts/stall.gd" id="27_jol3d"]
+[ext_resource type="Texture2D" uid="uid://dye4m7owt58h2" path="res://Assets/Robots/Stall/stall_error.png" id="28_n44lc"]
+[ext_resource type="Script" uid="uid://cv5eibniiqt5m" path="res://Scripts/power_drain.gd" id="29_a8b36"]
+[ext_resource type="AudioStream" uid="uid://cvahg6jld883q" path="res://Sound/Robots/Stall/error-03-125761.mp3" id="30_2v721"]
+[ext_resource type="Texture2D" uid="uid://cf3klouywnt8m" path="res://Assets/Robots/Stall/Stall_jumpscare.png" id="31_gjii0"]
+[ext_resource type="AudioStream" uid="uid://bueaxbshynnau" path="res://Sound/Robots/Stall/stall_jumpscare.mp3" id="32_6nivd"]
+[ext_resource type="Script" uid="uid://357igas760ux" path="res://Scripts/crooked.gd" id="33_4lb3r"]
+[ext_resource type="Texture2D" uid="uid://bl8k6fuwxlstd" path="res://Assets/Robots/Crooked/Crooked_appear.png" id="34_4rov5"]
+[ext_resource type="Texture2D" uid="uid://ipdal8vris1y" path="res://Assets/Robots/Crooked/Crooked_gone.png" id="35_a7h6w"]
+[ext_resource type="Texture2D" uid="uid://yo2saek4dr5i" path="res://Assets/Tools/Fan/fanoff.png" id="36_sarkg"]
+[ext_resource type="Texture2D" uid="uid://jylb1sd53cvg" path="res://Assets/Tools/Fan/fanon.png" id="37_o76y0"]
+[ext_resource type="Texture2D" uid="uid://chnpg4x8ncy4x" path="res://Assets/Robots/Crooked/crooked_jumpscare.png" id="38_uxvug"]
+[ext_resource type="AudioStream" uid="uid://dgbnvcxktq4di" path="res://Sound/Robots/Crooked/crooked_jumpscare.mp3" id="39_qxgqg"]
+[ext_resource type="Script" uid="uid://njcinqu7grh4" path="res://Scripts/shock.gd" id="40_65yj4"]
+[ext_resource type="Script" uid="uid://djn6lfuq668jw" path="res://Scripts/shock_status.gd" id="41_x68vh"]
+[ext_resource type="Script" uid="uid://de6jmf5hqkgxr" path="res://Scripts/downloads.gd" id="42_7umhw"]
+[ext_resource type="Script" uid="uid://c3tm8hswsqwl4" path="res://Scripts/tasks.gd" id="43_bxs6h"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jw32o"]
-atlas = ExtResource("2_rgh2o")
+atlas = ExtResource("3_k7xkd")
 region = Rect2(0, 0, 1000, 1000)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_50glp"]
-atlas = ExtResource("3_pbw6q")
+atlas = ExtResource("4_64id4")
 region = Rect2(0, 0, 1000, 1000)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vy5pj"]
-atlas = ExtResource("4_v1gob")
+atlas = ExtResource("5_l7y8l")
 region = Rect2(0, 0, 1000, 1000)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_bmxlf"]
@@ -79,7 +79,7 @@ animations = [{
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_v1gob"]
-atlas = ExtResource("5_pbw6q")
+atlas = ExtResource("7_75tmy")
 region = Rect2(0, 0, 1000, 700)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_jw32o"]
@@ -94,7 +94,7 @@ animations = [{
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_bmxlf"]
-atlas = ExtResource("8_50glp")
+atlas = ExtResource("10_jkcd8")
 region = Rect2(0, 0, 100, 100)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4kpch"]
@@ -109,11 +109,11 @@ animations = [{
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kpo4j"]
-atlas = ExtResource("12_aht7i")
+atlas = ExtResource("13_jhnia")
 region = Rect2(0, 0, 1000, 500)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_1p5hy"]
-atlas = ExtResource("12_frkhe")
+atlas = ExtResource("14_2m4s1")
 region = Rect2(0, 0, 1000, 500)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_h1m7h"]
@@ -136,23 +136,23 @@ animations = [{
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3tgeq"]
-atlas = ExtResource("16_sxkr1")
+atlas = ExtResource("19_mab3i")
 region = Rect2(0, 0, 1000, 1000)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_c4ay3"]
-atlas = ExtResource("17_fq0cl")
+atlas = ExtResource("20_1tg7v")
 region = Rect2(0, 0, 1000, 1000)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_aht7i"]
-atlas = ExtResource("18_hwpts")
+atlas = ExtResource("21_20x37")
 region = Rect2(0, 0, 1000, 1000)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5jffn"]
-atlas = ExtResource("19_jyqft")
+atlas = ExtResource("22_qbdne")
 region = Rect2(0, 0, 1000, 1000)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hwpts"]
-atlas = ExtResource("20_hwpts")
+atlas = ExtResource("23_63cb6")
 region = Rect2(0, 0, 1000, 1000)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_kpo4j"]
@@ -199,7 +199,7 @@ animations = [{
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4n42c"]
-atlas = ExtResource("24_kpo4j")
+atlas = ExtResource("25_6bhsf")
 region = Rect2(0, 0, 1000, 500)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5jffn"]
@@ -214,7 +214,7 @@ animations = [{
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_x3rx7"]
-atlas = ExtResource("30_qta6b")
+atlas = ExtResource("31_gjii0")
 region = Rect2(0, 0, 1000, 500)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_6heos"]
@@ -229,11 +229,11 @@ animations = [{
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_btbly"]
-atlas = ExtResource("32_vvnwx")
+atlas = ExtResource("34_4rov5")
 region = Rect2(0, 0, 1000, 1000)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_vvnwx"]
-atlas = ExtResource("32_6heos")
+atlas = ExtResource("35_a7h6w")
 region = Rect2(0, 0, 1000, 1000)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_btbly"]
@@ -256,11 +256,11 @@ animations = [{
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_clvyn"]
-atlas = ExtResource("36_utia5")
+atlas = ExtResource("36_sarkg")
 region = Rect2(0, 0, 100, 100)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_d8m2u"]
-atlas = ExtResource("37_f7hdo")
+atlas = ExtResource("37_o76y0")
 region = Rect2(0, 0, 100, 100)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5psol"]
@@ -283,7 +283,7 @@ animations = [{
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5psol"]
-atlas = ExtResource("38_clvyn")
+atlas = ExtResource("38_uxvug")
 region = Rect2(0, 0, 1000, 500)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_m4llh"]
@@ -300,10 +300,10 @@ animations = [{
 [node name="Node2D" type="Node2D"]
 
 [node name="Heating" type="Node" parent="."]
-script = ExtResource("1_vs04g")
+script = ExtResource("1_d0ro7")
 
 [node name="Power" type="Node" parent="."]
-script = ExtResource("1_r150o")
+script = ExtResource("2_uwk6c")
 
 [node name="Powersupply" type="Button" parent="Power"]
 z_index = 50
@@ -311,8 +311,10 @@ offset_left = 31.0
 offset_top = 192.0
 offset_right = 200.0
 offset_bottom = 421.0
+scale = Vector2(0.99369806, 1.0365038)
 theme_override_colors/font_color = Color(0.8745098, 0.8745098, 0.8745098, 0)
 theme_override_colors/font_focus_color = Color(0.9490196, 0.9490196, 0.9490196, 1)
+metadata/_edit_use_anchors_ = true
 
 [node name="ChargeSprite" type="AnimatedSprite2D" parent="Power/Powersupply"]
 position = Vector2(101.99999, 119.00003)
@@ -323,6 +325,8 @@ autoplay = "default"
 [node name="Panel" type="Panel" parent="Power"]
 offset_right = 170.0
 offset_bottom = 55.0
+scale = Vector2(0.99369806, 1.0365038)
+metadata/_edit_use_anchors_ = true
 
 [node name="Powerlabel" type="Label" parent="Power/Panel"]
 z_index = 600
@@ -340,15 +344,16 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 25
 text = "Power: 100"
+metadata/_edit_use_anchors_ = true
 
 [node name="Screen" type="Node" parent="."]
-script = ExtResource("5_v1gob")
+script = ExtResource("6_qupvh")
 
 [node name="ScreenSprite" type="AnimatedSprite2D" parent="Screen"]
 visible = false
 z_index = 100
 position = Vector2(564, 373.00003)
-scale = Vector2(1.031786, 1.0317857)
+scale = Vector2(1.0252837, 1.0694498)
 sprite_frames = SubResource("SpriteFrames_jw32o")
 autoplay = "default"
 
@@ -358,14 +363,15 @@ offset_left = 356.0
 offset_top = 573.0
 offset_right = 784.0
 offset_bottom = 626.0
+scale = Vector2(0.99369806, 1.0365038)
 text = "Screen
 "
 
 [node name="ScreenStatus" type="Node" parent="."]
-script = ExtResource("7_jw32o")
+script = ExtResource("8_637a8")
 
 [node name="Blink" type="Node" parent="."]
-script = ExtResource("8_vy5pj")
+script = ExtResource("9_w3en0")
 
 [node name="BlinkButton" type="Button" parent="Blink"]
 z_index = 500
@@ -373,8 +379,10 @@ offset_left = 1035.0
 offset_top = 552.0
 offset_right = 1115.6604
 offset_bottom = 627.0
+scale = Vector2(0.99369806, 1.0365038)
 text = "blink
 "
+metadata/_edit_use_anchors_ = true
 
 [node name="BlinkSprite" type="AnimatedSprite2D" parent="Blink"]
 visible = false
@@ -384,12 +392,12 @@ scale = Vector2(14.162498, 8.197499)
 sprite_frames = SubResource("SpriteFrames_4kpch")
 
 [node name="BlinkStatus" type="Node" parent="."]
-script = ExtResource("10_bmxlf")
+script = ExtResource("11_hb331")
 
 [node name="Robots" type="Node" parent="."]
 
 [node name="FalseHuman" type="Node" parent="Robots"]
-script = ExtResource("11_grg3l")
+script = ExtResource("12_hh621")
 
 [node name="FalseSprite" type="AnimatedSprite2D" parent="Robots/FalseHuman"]
 visible = false
@@ -401,18 +409,18 @@ autoplay = "default"
 
 [node name="Leave" type="AudioStreamPlayer2D" parent="Robots/FalseHuman"]
 position = Vector2(593, 436)
-stream = ExtResource("13_hwpts")
+stream = ExtResource("15_iu7dq")
 
 [node name="Breathing" type="AudioStreamPlayer2D" parent="Robots/FalseHuman"]
 position = Vector2(591, 435)
-stream = ExtResource("14_1p5hy")
+stream = ExtResource("16_wahdi")
 volume_db = -3.794
 
 [node name="Scream" type="AudioStreamPlayer2D" parent="Robots/FalseHuman"]
-stream = ExtResource("16_5jffn")
+stream = ExtResource("17_lwyey")
 
 [node name="TheAware" type="Node" parent="Robots"]
-script = ExtResource("15_0sclb")
+script = ExtResource("18_1cppf")
 
 [node name="AwareSprite" type="AnimatedSprite2D" parent="Robots/TheAware"]
 position = Vector2(570, 312)
@@ -422,7 +430,7 @@ animation = &"Hide"
 autoplay = "Hide"
 
 [node name="AwareShocked" type="AudioStreamPlayer2D" parent="Robots/TheAware"]
-stream = ExtResource("21_jyqft")
+stream = ExtResource("24_576as")
 
 [node name="Aware_Jumpscare" type="AnimatedSprite2D" parent="Robots/TheAware"]
 visible = false
@@ -432,10 +440,10 @@ scale = Vector2(1.198, 1.198)
 sprite_frames = SubResource("SpriteFrames_5jffn")
 
 [node name="Aware_Jumpscaresound" type="AudioStreamPlayer2D" parent="Robots/TheAware"]
-stream = ExtResource("25_4n42c")
+stream = ExtResource("26_yunic")
 
 [node name="Stall" type="Node" parent="Robots"]
-script = ExtResource("26_xvtyr")
+script = ExtResource("27_jol3d")
 
 [node name="error1" type="Button" parent="Robots/Stall"]
 visible = false
@@ -444,14 +452,14 @@ offset_left = 356.0
 offset_top = 102.0
 offset_right = 764.0
 offset_bottom = 510.0
-icon = ExtResource("26_c5snn")
+icon = ExtResource("28_n44lc")
 flat = true
 
 [node name="Power_drain" type="Node" parent="Robots/Stall"]
-script = ExtResource("28_u7mjy")
+script = ExtResource("29_a8b36")
 
 [node name="ErSound" type="AudioStreamPlayer2D" parent="Robots/Stall"]
-stream = ExtResource("29_4yxf6")
+stream = ExtResource("30_2v721")
 
 [node name="Stall_jumpscare" type="AnimatedSprite2D" parent="Robots/Stall"]
 visible = false
@@ -461,11 +469,11 @@ scale = Vector2(1.162, 1.162)
 sprite_frames = SubResource("SpriteFrames_6heos")
 
 [node name="Stall_Jump" type="AudioStreamPlayer2D" parent="Robots/Stall"]
-stream = ExtResource("31_x3rx7")
+stream = ExtResource("32_6nivd")
 volume_db = 2.019
 
 [node name="Crooked" type="Node" parent="Robots"]
-script = ExtResource("32_btbly")
+script = ExtResource("33_4lb3r")
 
 [node name="Crooked_Sprite" type="AnimatedSprite2D" parent="Robots/Crooked"]
 visible = false
@@ -499,10 +507,10 @@ scale = Vector2(1.184, 1.184)
 sprite_frames = SubResource("SpriteFrames_m4llh")
 
 [node name="Crook_scream" type="AudioStreamPlayer2D" parent="Robots/Crooked"]
-stream = ExtResource("39_d8m2u")
+stream = ExtResource("39_qxgqg")
 
 [node name="Shock" type="Node" parent="."]
-script = ExtResource("20_fq0cl")
+script = ExtResource("40_65yj4")
 
 [node name="ShockButton" type="Button" parent="Shock"]
 offset_left = 839.0
@@ -512,10 +520,10 @@ offset_bottom = 373.0
 text = "shock"
 
 [node name="ShockStatus" type="Node" parent="."]
-script = ExtResource("21_hwpts")
+script = ExtResource("41_x68vh")
 
 [node name="Downloads" type="Node" parent="."]
-script = ExtResource("24_3tgeq")
+script = ExtResource("42_7umhw")
 
 [node name="File 1" type="Button" parent="Downloads"]
 visible = false
@@ -588,7 +596,7 @@ grow_vertical = 2
 text = "0%"
 
 [node name="Tasks" type="Node" parent="."]
-script = ExtResource("25_c4ay3")
+script = ExtResource("43_bxs6h")
 
 [connection signal="button_down" from="Power/Powersupply" to="Power" method="_on_powersupply_button_down"]
 [connection signal="button_up" from="Power/Powersupply" to="Power" method="_on_powersupply_button_up"]
