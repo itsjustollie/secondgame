@@ -22,6 +22,7 @@ BlinkStatus="*res://Scripts/blink_status.gd"
 ShockStatus="*res://Scripts/shock_status.gd"
 Tasks="*res://Scripts/tasks.gd"
 PowerDrain="*res://Scripts/power_drain.gd"
+Heating="*res://Scripts/heating.gd"
 
 [input]
 

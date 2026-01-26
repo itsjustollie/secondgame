@@ -20,6 +20,9 @@ func _process(delta: float) -> void:
 		
 		if PowerDrain.er1 == true:
 			power -= 1
+		
+		if Heating.HeatOn == true:
+			power -= 1
 	
 	if regen == true and ScreenStatus.screen_active == false and BlinkStatus.blink_active == false:
 		regenTime += delta

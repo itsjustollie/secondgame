@@ -1,6 +1,7 @@
-[gd_scene load_steps=57 format=3 uid="uid://btspxe0fqidd1"]
+[gd_scene load_steps=73 format=3 uid="uid://btspxe0fqidd1"]
 
 [ext_resource type="Script" uid="uid://bd3alhuf38w7i" path="res://Scripts/power.gd" id="1_r150o"]
+[ext_resource type="Script" uid="uid://crj28w3fh4vvr" path="res://Scripts/heating.gd" id="1_vs04g"]
 [ext_resource type="Texture2D" uid="uid://btmwiu1a2mdsb" path="res://Assets/Tools/Charger/chargeon1.png" id="2_rgh2o"]
 [ext_resource type="Texture2D" uid="uid://se82gfijdrnh" path="res://Assets/Tools/Charger/chargeon2.png" id="3_pbw6q"]
 [ext_resource type="Texture2D" uid="uid://cpmfdqwmnc3d8" path="res://Assets/Tools/Charger/chargeoff.png" id="4_v1gob"]
@@ -35,6 +36,13 @@
 [ext_resource type="AudioStream" uid="uid://cvahg6jld883q" path="res://Sound/Robots/Stall/error-03-125761.mp3" id="29_4yxf6"]
 [ext_resource type="Texture2D" uid="uid://cf3klouywnt8m" path="res://Assets/Robots/Stall/Stall_jumpscare.png" id="30_qta6b"]
 [ext_resource type="AudioStream" uid="uid://bueaxbshynnau" path="res://Sound/Robots/Stall/stall_jumpscare.mp3" id="31_x3rx7"]
+[ext_resource type="Texture2D" uid="uid://ipdal8vris1y" path="res://Assets/Robots/Crooked/Crooked_gone.png" id="32_6heos"]
+[ext_resource type="Script" uid="uid://357igas760ux" path="res://Scripts/crooked.gd" id="32_btbly"]
+[ext_resource type="Texture2D" uid="uid://bl8k6fuwxlstd" path="res://Assets/Robots/Crooked/Crooked_appear.png" id="32_vvnwx"]
+[ext_resource type="Texture2D" uid="uid://yo2saek4dr5i" path="res://Assets/Tools/Fan/fanoff.png" id="36_utia5"]
+[ext_resource type="Texture2D" uid="uid://jylb1sd53cvg" path="res://Assets/Tools/Fan/fanon.png" id="37_f7hdo"]
+[ext_resource type="Texture2D" uid="uid://chnpg4x8ncy4x" path="res://Assets/Robots/Crooked/crooked_jumpscare.png" id="38_clvyn"]
+[ext_resource type="AudioStream" uid="uid://dgbnvcxktq4di" path="res://Sound/Robots/Crooked/crooked_jumpscare.mp3" id="39_d8m2u"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jw32o"]
 atlas = ExtResource("2_rgh2o")
@@ -220,7 +228,79 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_btbly"]
+atlas = ExtResource("32_vvnwx")
+region = Rect2(0, 0, 1000, 1000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vvnwx"]
+atlas = ExtResource("32_6heos")
+region = Rect2(0, 0, 1000, 1000)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_btbly"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_btbly")
+}],
+"loop": true,
+"name": &"Attack",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vvnwx")
+}],
+"loop": true,
+"name": &"gone",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_clvyn"]
+atlas = ExtResource("36_utia5")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d8m2u"]
+atlas = ExtResource("37_f7hdo")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5psol"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_clvyn")
+}],
+"loop": true,
+"name": &"Off",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d8m2u")
+}],
+"loop": true,
+"name": &"On",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5psol"]
+atlas = ExtResource("38_clvyn")
+region = Rect2(0, 0, 1000, 500)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_m4llh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5psol")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="Node2D" type="Node2D"]
+
+[node name="Heating" type="Node" parent="."]
+script = ExtResource("1_vs04g")
 
 [node name="Power" type="Node" parent="."]
 script = ExtResource("1_r150o")
@@ -359,7 +439,7 @@ script = ExtResource("26_xvtyr")
 
 [node name="error1" type="Button" parent="Robots/Stall"]
 visible = false
-z_index = 120
+z_index = 130
 offset_left = 356.0
 offset_top = 102.0
 offset_right = 764.0
@@ -383,6 +463,43 @@ sprite_frames = SubResource("SpriteFrames_6heos")
 [node name="Stall_Jump" type="AudioStreamPlayer2D" parent="Robots/Stall"]
 stream = ExtResource("31_x3rx7")
 volume_db = 2.019
+
+[node name="Crooked" type="Node" parent="Robots"]
+script = ExtResource("32_btbly")
+
+[node name="Crooked_Sprite" type="AnimatedSprite2D" parent="Robots/Crooked"]
+visible = false
+z_index = 125
+position = Vector2(815, 268)
+scale = Vector2(0.29250008, 0.29250008)
+sprite_frames = SubResource("SpriteFrames_btbly")
+animation = &"gone"
+
+[node name="HeatButton" type="Button" parent="Robots/Crooked"]
+visible = false
+z_index = 120
+offset_left = 689.0
+offset_top = 422.0
+offset_right = 801.0
+offset_bottom = 456.0
+text = "Heating"
+
+[node name="Fan" type="AnimatedSprite2D" parent="Robots/Crooked"]
+visible = false
+z_index = 120
+position = Vector2(901, 466)
+sprite_frames = SubResource("SpriteFrames_5psol")
+animation = &"On"
+
+[node name="Crooked_Jumpscare" type="AnimatedSprite2D" parent="Robots/Crooked"]
+visible = false
+z_index = 50
+position = Vector2(594, 369)
+scale = Vector2(1.184, 1.184)
+sprite_frames = SubResource("SpriteFrames_m4llh")
+
+[node name="Crook_scream" type="AudioStreamPlayer2D" parent="Robots/Crooked"]
+stream = ExtResource("39_d8m2u")
 
 [node name="Shock" type="Node" parent="."]
 script = ExtResource("20_fq0cl")
@@ -482,6 +599,7 @@ script = ExtResource("25_c4ay3")
 [connection signal="pressed" from="Blink/BlinkButton" to="Blink" method="_on_blink_button_pressed"]
 [connection signal="button_up" from="Robots/Stall/error1" to="Robots/Stall" method="_on_error_1_button_up"]
 [connection signal="toggled" from="Robots/Stall/error1" to="Robots/Stall" method="_on_error_1_toggled"]
+[connection signal="pressed" from="Robots/Crooked/HeatButton" to="Robots/Crooked" method="_on_heat_button_pressed"]
 [connection signal="pressed" from="Shock/ShockButton" to="Shock" method="_on_shock_button_pressed"]
 [connection signal="pressed" from="Shock/ShockButton" to="Shock/ShockButton" method="_on_pressed"]
 [connection signal="button_down" from="Downloads/File 1" to="Downloads" method="_on_file_1_button_down"]
