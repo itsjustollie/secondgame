@@ -1,4 +1,4 @@
-[gd_scene load_steps=73 format=3 uid="uid://btspxe0fqidd1"]
+[gd_scene load_steps=93 format=3 uid="uid://btspxe0fqidd1"]
 
 [ext_resource type="Script" uid="uid://crj28w3fh4vvr" path="res://Scripts/heating.gd" id="1_d0ro7"]
 [ext_resource type="Script" uid="uid://bd3alhuf38w7i" path="res://Scripts/power.gd" id="2_uwk6c"]
@@ -13,15 +13,25 @@
 [ext_resource type="Script" uid="uid://b4ujlfkjd0f5c" path="res://Scripts/blink_status.gd" id="11_hb331"]
 [ext_resource type="Script" uid="uid://d0pw73dj3skgq" path="res://Scripts/false_human.gd" id="12_hh621"]
 [ext_resource type="Texture2D" uid="uid://bel848hgwllf3" path="res://Assets/Robots/False_Human/False_Human_jumpscare.png" id="13_jhnia"]
-[ext_resource type="Texture2D" uid="uid://c4npokoci6fmd" path="res://Assets/Robots/False_Human/False_Human.png" id="14_2m4s1"]
+[ext_resource type="Texture2D" uid="uid://cruymkm2t50g3" path="res://Assets/Robots/False_Human/False_Human.png" id="14_2m4s1"]
+[ext_resource type="Texture2D" uid="uid://d2k5awoqfx8f1" path="res://Assets/Robots/False_Human/comes_up/False_Human_up1.png" id="14_hb331"]
+[ext_resource type="Texture2D" uid="uid://c6hql6djmxjtt" path="res://Assets/Robots/False_Human/comes_up/False_Human_up2.png" id="15_hh621"]
 [ext_resource type="AudioStream" uid="uid://dnyit2cpdvx72" path="res://Sound/Robots/False_Human/Leave (1).mp3" id="15_iu7dq"]
+[ext_resource type="Texture2D" uid="uid://c3dcwpn4isd3p" path="res://Assets/Robots/False_Human/comes_up/False_Human_up3.png" id="16_jhnia"]
 [ext_resource type="AudioStream" uid="uid://du2g1gyyqk0xh" path="res://Sound/Robots/False_Human/False_Breathing.mp3" id="16_wahdi"]
+[ext_resource type="Texture2D" uid="uid://d1inkr0d5p1it" path="res://Assets/Robots/False_Human/comes_up/False_Human_up4.png" id="17_2m4s1"]
 [ext_resource type="AudioStream" uid="uid://ceugkovaxj6rc" path="res://Sound/Robots/False_Human/false_jumpscare.mp3" id="17_lwyey"]
 [ext_resource type="Script" uid="uid://gw3w6qgk4cla" path="res://Scripts/the_aware.gd" id="18_1cppf"]
+[ext_resource type="Texture2D" uid="uid://h0w6en16j46h" path="res://Assets/Robots/False_Human/comes_up/False_Human_up5.png" id="18_iu7dq"]
 [ext_resource type="Texture2D" uid="uid://csrwqcf8o1akf" path="res://Assets/Robots/The_Aware/aware_can't_see.png" id="19_mab3i"]
+[ext_resource type="Texture2D" uid="uid://b0so8uq75f3lh" path="res://Assets/Robots/False_Human/comes_up/False_Human_up6.png" id="19_wahdi"]
 [ext_resource type="Texture2D" uid="uid://buy3t1glta6v5" path="res://Assets/Robots/The_Aware/aware_stage1.png" id="20_1tg7v"]
+[ext_resource type="Texture2D" uid="uid://bidv2nth0ypap" path="res://Assets/Robots/False_Human/comes_up/False_Human_up7.png" id="20_lwyey"]
+[ext_resource type="Texture2D" uid="uid://c4j4efurgjvrj" path="res://Assets/Robots/False_Human/comes_up/False_Human_up8.png" id="21_1cppf"]
 [ext_resource type="Texture2D" uid="uid://c6miwachqxa6o" path="res://Assets/Robots/The_Aware/aware_stage2.png" id="21_20x37"]
+[ext_resource type="Texture2D" uid="uid://dbx5cewf15kmy" path="res://Assets/Robots/False_Human/comes_up/False_Human_up9.png" id="22_mab3i"]
 [ext_resource type="Texture2D" uid="uid://bx6axnihvvkx7" path="res://Assets/Robots/The_Aware/aware_stage3.png" id="22_qbdne"]
+[ext_resource type="Texture2D" uid="uid://bp02juh4ag3gk" path="res://Assets/Robots/False_Human/comes_up/False_Human_up10.png" id="23_1tg7v"]
 [ext_resource type="Texture2D" uid="uid://wvqptmabswmn" path="res://Assets/Robots/The_Aware/aware_shocked.png" id="23_63cb6"]
 [ext_resource type="AudioStream" uid="uid://dvx3wl3ob8low" path="res://Sound/Robots/The_Aware/aware_shocked.mp3" id="24_576as"]
 [ext_resource type="Texture2D" uid="uid://bc7bu80uhwyf3" path="res://Assets/Robots/The_Aware/Aware_jumpscare.png" id="25_6bhsf"]
@@ -112,7 +122,47 @@ animations = [{
 atlas = ExtResource("13_jhnia")
 region = Rect2(0, 0, 1000, 500)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_1p5hy"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_20x37"]
+atlas = ExtResource("14_hb331")
+region = Rect2(0, 0, 1000, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qbdne"]
+atlas = ExtResource("15_hh621")
+region = Rect2(0, 0, 1000, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_63cb6"]
+atlas = ExtResource("16_jhnia")
+region = Rect2(0, 0, 1000, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_576as"]
+atlas = ExtResource("17_2m4s1")
+region = Rect2(0, 0, 1000, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6bhsf"]
+atlas = ExtResource("18_iu7dq")
+region = Rect2(0, 0, 1000, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yunic"]
+atlas = ExtResource("19_wahdi")
+region = Rect2(0, 0, 1000, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jol3d"]
+atlas = ExtResource("20_lwyey")
+region = Rect2(0, 0, 1000, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n44lc"]
+atlas = ExtResource("21_1cppf")
+region = Rect2(0, 0, 1000, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a8b36"]
+atlas = ExtResource("22_mab3i")
+region = Rect2(0, 0, 1000, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2v721"]
+atlas = ExtResource("23_1tg7v")
+region = Rect2(0, 0, 1000, 500)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gjii0"]
 atlas = ExtResource("14_2m4s1")
 region = Rect2(0, 0, 1000, 500)
 
@@ -128,11 +178,41 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_1p5hy")
+"texture": SubResource("AtlasTexture_20x37")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qbdne")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_63cb6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_576as")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6bhsf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yunic")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jol3d")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n44lc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a8b36")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2v721")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gjii0")
 }],
-"loop": true,
+"loop": false,
 "name": &"default",
-"speed": 5.0
+"speed": 24.0
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3tgeq"]
@@ -402,10 +482,12 @@ script = ExtResource("12_hh621")
 [node name="FalseSprite" type="AnimatedSprite2D" parent="Robots/FalseHuman"]
 visible = false
 z_index = 50
+texture_filter = 1
 position = Vector2(669, 349.99997)
 scale = Vector2(1.2179999, 1.2179999)
 sprite_frames = SubResource("SpriteFrames_h1m7h")
-autoplay = "default"
+frame = 1
+frame_progress = 0.7739719
 
 [node name="Leave" type="AudioStreamPlayer2D" parent="Robots/FalseHuman"]
 position = Vector2(593, 436)

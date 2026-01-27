@@ -33,6 +33,7 @@ func _process(delta: float) -> void:
 		time = 0.0
 	
 	if attack == true:
+		false_sprite.play("default")
 		false_sprite.show()
 		kill_time = (randi_range(8, 13))
 		

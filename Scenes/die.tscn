@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://fwc051rudbyy"]
 
-[ext_resource type="Script" uid="uid://bod51vnxalyxi" path="res://Scenes/retry.gd" id="1_jfeu1"]
+[ext_resource type="Script" uid="uid://bod51vnxalyxi" path="res://Scripts/retry.gd" id="1_jfeu1"]
 
 [node name="Node2D" type="Node2D"]
 

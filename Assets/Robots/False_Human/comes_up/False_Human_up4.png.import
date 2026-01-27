@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cruymkm2t50g3"
-path="res://.godot/imported/False_Human.png-7ca9195fa6641146409fe73b42c37055.ctex"
+uid="uid://d1inkr0d5p1it"
+path="res://.godot/imported/False_Human_up4.png-a88a254a35ff43c58213288d0d11d4f6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Robots/False_Human/False_Human.png"
-dest_files=["res://.godot/imported/False_Human.png-7ca9195fa6641146409fe73b42c37055.ctex"]
+source_file="res://Assets/Robots/False_Human/comes_up/False_Human_up4.png"
+dest_files=["res://.godot/imported/False_Human_up4.png-a88a254a35ff43c58213288d0d11d4f6.ctex"]
 
 [params]
 

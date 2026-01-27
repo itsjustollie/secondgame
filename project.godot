@@ -23,7 +23,7 @@ ShockStatus="*res://Scripts/shock_status.gd"
 Tasks="*res://Scripts/tasks.gd"
 PowerDrain="*res://Scripts/power_drain.gd"
 Heating="*res://Scripts/heating.gd"
-Aggresion="*res://Scenes/aggresion.gd"
+Aggresion="*res://Scripts/aggresion.gd"
 
 [display]
 

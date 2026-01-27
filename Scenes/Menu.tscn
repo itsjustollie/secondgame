@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://c827wxlkp0804"]
 
 [ext_resource type="Script" uid="uid://docyhskyspn8f" path="res://Scripts/levels.gd" id="1_3kf3n"]
-[ext_resource type="Script" uid="uid://cj213oggavcet" path="res://Scenes/aggresion.gd" id="2_6pedr"]
+[ext_resource type="Script" uid="uid://cj213oggavcet" path="res://Scripts/aggresion.gd" id="2_6pedr"]
 
 [node name="Node2D" type="Node2D"]
 
