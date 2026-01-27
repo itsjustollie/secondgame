@@ -178,6 +178,14 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("14_2m4s1")
+}],
+"loop": true,
+"name": &"Waiting",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_20x37")
 }, {
 "duration": 1.0,
@@ -208,6 +216,12 @@ animations = [{
 "texture": SubResource("AtlasTexture_2v721")
 }, {
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_gjii0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2v721")
+}, {
+"duration": 200.0,
 "texture": SubResource("AtlasTexture_gjii0")
 }],
 "loop": false,
@@ -486,8 +500,6 @@ texture_filter = 1
 position = Vector2(669, 349.99997)
 scale = Vector2(1.2179999, 1.2179999)
 sprite_frames = SubResource("SpriteFrames_h1m7h")
-frame = 1
-frame_progress = 0.7739719
 
 [node name="Leave" type="AudioStreamPlayer2D" parent="Robots/FalseHuman"]
 position = Vector2(593, 436)
@@ -496,7 +508,7 @@ stream = ExtResource("15_iu7dq")
 [node name="Breathing" type="AudioStreamPlayer2D" parent="Robots/FalseHuman"]
 position = Vector2(591, 435)
 stream = ExtResource("16_wahdi")
-volume_db = -3.794
+volume_db = -19.736
 
 [node name="Scream" type="AudioStreamPlayer2D" parent="Robots/FalseHuman"]
 stream = ExtResource("17_lwyey")

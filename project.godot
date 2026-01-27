@@ -27,7 +27,6 @@ Aggresion="*res://Scripts/aggresion.gd"
 
 [display]
 
-window/size/mode=3
 window/size/borderless=true
 window/stretch/mode="canvas_items"
 
