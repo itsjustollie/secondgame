@@ -9,7 +9,7 @@ func _on_screen_button_pressed():
 	if BlinkStatus.blink_active == false:
 		ScreenStatus.screen_active = !ScreenStatus.screen_active
 		
-		if ScreenStatus.screen_active:
+		if ScreenStatus.screen_active == true:
 			screen_sprite.show()
-		else:
+		elif ScreenStatus.screen_active == false:
 			screen_sprite.hide()

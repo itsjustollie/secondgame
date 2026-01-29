@@ -4,6 +4,8 @@ extends Node
 @onready var er_sound: AudioStreamPlayer2D = $ErSound
 @onready var stall_jumpscare: AnimatedSprite2D = $Stall_jumpscare
 @onready var stall_jump: AudioStreamPlayer2D = $Stall_Jump
+@onready var screen_sprite: AnimatedSprite2D = $"../../Screen/ScreenSprite"
+@onready var blink_sprite: AnimatedSprite2D = $"../../Camera/Blink/BlinkSprite"
 
 var time := 0.0
 var move_chance := 0
@@ -39,6 +41,10 @@ func _process(delta: float) -> void:
 	if PowerDrain.poweroff == true:
 		pause += delta
 		if pause >= 0.8:
+			BlinkStatus.blink_active = false
+			ScreenStatus.screen_active = false
+			blink_sprite.hide()
+			screen_sprite.hide()
 			stall_jump.play()
 			stall_jumpscare.show()
 			if pause >= 2.2:

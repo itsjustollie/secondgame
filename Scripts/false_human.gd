@@ -4,6 +4,8 @@ extends Node
 @onready var leave: AudioStreamPlayer2D = $Leave
 @onready var breathing: AudioStreamPlayer2D = $Breathing
 @onready var scream: AudioStreamPlayer2D = $Scream
+@onready var blink_sprite: AnimatedSprite2D = $"../../Camera/Blink/BlinkSprite"
+@onready var screen_sprite: AnimatedSprite2D = $"../../Screen/ScreenSprite"
 
 enum State {
 	IDLE,
@@ -69,11 +71,16 @@ func start_attack():
 	false_sprite.show()
 	false_sprite.play("default") # put-up animation
 	breathing.play()
-	kill_time = randi_range(7, 8)
+	kill_time = randi_range(6, 8)
 
 
 func start_jumpscare():
 	state = State.JUMPSCARE
+
+	BlinkStatus.blink_active = false
+	ScreenStatus.screen_active = false
+	blink_sprite.hide()
+	screen_sprite.hide()
 	false_sprite.play("Jumpscare")
 	breathing.stop()
 	scream.play()

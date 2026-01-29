@@ -5,6 +5,8 @@ extends Node
 @onready var fan: AnimatedSprite2D = $Fan
 @onready var crooked_jumpscare: AnimatedSprite2D = $Crooked_Jumpscare
 @onready var crook_scream: AudioStreamPlayer2D = $Crook_scream
+@onready var blink_sprite: AnimatedSprite2D = $"../../Camera/Blink/BlinkSprite"
+@onready var screen_sprite: AnimatedSprite2D = $"../../Screen/ScreenSprite"
 
 var time := 0.0
 var move_chance := 0
@@ -50,6 +52,10 @@ func _process(delta: float) -> void:
 		kill_time = (randi_range(12, 15))
 		
 		if time >= kill_time:
+			BlinkStatus.blink_active = false
+			ScreenStatus.screen_active = false
+			blink_sprite.hide()
+			screen_sprite.hide()
 			attack = false
 			crook_scream.play()
 			wait = true

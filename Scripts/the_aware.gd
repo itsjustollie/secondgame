@@ -4,6 +4,9 @@ extends Node
 @onready var aware_shocked: AudioStreamPlayer2D = $AwareShocked
 @onready var aware_jumpscare: AnimatedSprite2D = $Aware_Jumpscare
 @onready var aware_jumpscaresound: AudioStreamPlayer2D = $Aware_Jumpscaresound
+@onready var sparks: GPUParticles2D = $"../../Shock/Sparks"
+@onready var blink_sprite: AnimatedSprite2D = $"../../Camera/Blink/BlinkSprite"
+@onready var screen_sprite: AnimatedSprite2D = $"../../Screen/ScreenSprite"
 
 
 var time := 0.0
@@ -52,12 +55,19 @@ func _process(delta: float) -> void:
 		
 		if ShockStatus.shock_active == true:
 			aware_shocked.play()
+			sparks.restart()
+			sparks.emitting = true
 			attack = false
 			aware_sprite.animation = "Hide"
 			stage = "Stage1"
 	
 	if pause == true:
 		jumpscare_time += delta
+		BlinkStatus.blink_active = false
+		ScreenStatus.screen_active = false
+		blink_sprite.hide()
+		screen_sprite.hide()
+		
 		if jumpscare_time >= 1.2:
 			get_tree().change_scene_to_file("res://Scenes/die.tscn")
 

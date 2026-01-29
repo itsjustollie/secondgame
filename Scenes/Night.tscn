@@ -1,4 +1,4 @@
-[gd_scene load_steps=98 format=3 uid="uid://btspxe0fqidd1"]
+[gd_scene load_steps=137 format=3 uid="uid://btspxe0fqidd1"]
 
 [ext_resource type="Script" uid="uid://crj28w3fh4vvr" path="res://Scripts/heating.gd" id="1_d0ro7"]
 [ext_resource type="Script" uid="uid://bd3alhuf38w7i" path="res://Scripts/power.gd" id="2_uwk6c"]
@@ -54,9 +54,25 @@
 [ext_resource type="Script" uid="uid://djn6lfuq668jw" path="res://Scripts/shock_status.gd" id="41_x68vh"]
 [ext_resource type="Script" uid="uid://de6jmf5hqkgxr" path="res://Scripts/downloads.gd" id="42_7umhw"]
 [ext_resource type="Script" uid="uid://c3tm8hswsqwl4" path="res://Scripts/tasks.gd" id="43_bxs6h"]
+[ext_resource type="Texture2D" uid="uid://dxdgm312chsml" path="res://Assets/Tools/Shock/Shock.png" id="50_wahdi"]
+[ext_resource type="Texture2D" uid="uid://k4ubr0q6g4ta" path="res://Assets/Tools/Shock/Shock_clicked.png" id="51_mab3i"]
+[ext_resource type="Texture2D" uid="uid://5ut0cjqdr7f3" path="res://Assets/Tools/Shock/spark.png" id="52_1tg7v"]
 [ext_resource type="Script" uid="uid://bbmjn1gwr4nvq" path="res://Scripts/panel.gd" id="53_jhnia"]
 [ext_resource type="Script" uid="uid://ctekpmu6n2rni" path="res://Scripts/camera.gd" id="54_hh621"]
 [ext_resource type="Script" uid="uid://3irxa02xj7hm" path="res://Scripts/blink_button.gd" id="55_2m4s1"]
+[ext_resource type="Texture2D" uid="uid://cate8bk5seohw" path="res://Assets/Tools/Blink/blink_close.png" id="57_1cppf"]
+[ext_resource type="Texture2D" uid="uid://c8kbwyrjk6p2m" path="res://Assets/Tools/Blink/blink_open.png" id="58_mab3i"]
+[ext_resource type="Texture2D" uid="uid://dpwjvshsxqqiw" path="res://Assets/Tools/Blink/blink7.png" id="62_jol3d"]
+[ext_resource type="Texture2D" uid="uid://cy7epd70xiatu" path="res://Assets/Tools/Blink/blink6.png" id="63_n44lc"]
+[ext_resource type="Texture2D" uid="uid://dd8gt3te1nfbj" path="res://Assets/Tools/Blink/blink5.png" id="64_a8b36"]
+[ext_resource type="Texture2D" uid="uid://c2dpabp2w2h3i" path="res://Assets/Tools/Blink/blink4.png" id="65_2v721"]
+[ext_resource type="Texture2D" uid="uid://wsww8g8tgw62" path="res://Assets/Tools/Blink/blink3.png" id="66_gjii0"]
+[ext_resource type="Texture2D" uid="uid://uoscy7bt04uj" path="res://Assets/Tools/Blink/blink2.png" id="67_6nivd"]
+[ext_resource type="Texture2D" uid="uid://bpm71yh2ugg7g" path="res://Assets/Tools/Blink/blink1.png" id="68_4lb3r"]
+[ext_resource type="Texture2D" uid="uid://caolehvn4v2al" path="res://Assets/Background/temp_bg.png" id="70_n44lc"]
+[ext_resource type="Texture2D" uid="uid://bhqj42o6fwaa0" path="res://Assets/Background/GRBG.png" id="71_a8b36"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mab3i"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_mab3i"]
 atlas = ExtResource("3_iu7dq")
@@ -387,19 +403,197 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_bmxlf"]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1tg7v"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sarkg"]
+atlas = ExtResource("51_mab3i")
+region = Rect2(0, 0, 400, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a7h6w"]
+atlas = ExtResource("50_wahdi")
+region = Rect2(0, 0, 400, 400)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_o76y0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sarkg")
+}],
+"loop": true,
+"name": &"Off",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a7h6w")
+}],
+"loop": true,
+"name": &"On",
+"speed": 5.0
+}]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_20x37"]
+particle_flag_disable_z = true
+emission_shape = 1
+emission_sphere_radius = 60.56
+angle_min = 1.0728835e-05
+angle_max = 1.0728835e-05
+inherit_velocity_ratio = 0.975
+spread = 80.556
+gravity = Vector3(0, 98, 0)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1cppf"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1cppf"]
+atlas = ExtResource("57_1cppf")
+region = Rect2(0, 0, 50, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4rov5"]
+atlas = ExtResource("58_mab3i")
+region = Rect2(0, 0, 50, 50)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_a7h6w"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1cppf")
+}],
+"loop": true,
+"name": &"Close",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4rov5")
+}],
+"loop": true,
+"name": &"Open",
+"speed": 24.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o76y0"]
+atlas = ExtResource("62_jol3d")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_uxvug"]
+atlas = ExtResource("63_n44lc")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qxgqg"]
+atlas = ExtResource("64_a8b36")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_65yj4"]
+atlas = ExtResource("65_2v721")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x68vh"]
+atlas = ExtResource("66_gjii0")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7umhw"]
+atlas = ExtResource("67_6nivd")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bxs6h"]
+atlas = ExtResource("68_4lb3r")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5f5fg"]
 atlas = ExtResource("10_jkcd8")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0my6s"]
+atlas = ExtResource("10_jkcd8")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8v3xs"]
+atlas = ExtResource("68_4lb3r")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wrw1u"]
+atlas = ExtResource("67_6nivd")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kgm7n"]
+atlas = ExtResource("66_gjii0")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ahpu"]
+atlas = ExtResource("65_2v721")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3rfhh"]
+atlas = ExtResource("64_a8b36")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bo87v"]
+atlas = ExtResource("63_n44lc")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_klfvk"]
+atlas = ExtResource("62_jol3d")
 region = Rect2(0, 0, 100, 100)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_4kpch"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_bmxlf")
+"texture": SubResource("AtlasTexture_o76y0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_uxvug")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qxgqg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_65yj4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x68vh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7umhw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bxs6h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5f5fg")
 }],
-"loop": true,
-"name": &"default",
-"speed": 5.0
+"loop": false,
+"name": &"Close",
+"speed": 12.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0my6s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8v3xs")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wrw1u")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kgm7n")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1ahpu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3rfhh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bo87v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_klfvk")
+}],
+"loop": false,
+"name": &"Open",
+"speed": 12.0
 }]
 
 [node name="Node2D" type="Node2D"]
@@ -419,10 +613,13 @@ offset_bottom = 421.0
 scale = Vector2(0.99369806, 1.0365038)
 theme_override_colors/font_color = Color(0.8745098, 0.8745098, 0.8745098, 0)
 theme_override_colors/font_focus_color = Color(0.9490196, 0.9490196, 0.9490196, 1)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_mab3i")
+flat = true
 metadata/_edit_use_anchors_ = true
 
 [node name="ChargeSprite" type="AnimatedSprite2D" parent="Power/Powersupply"]
 z_index = 30
+texture_filter = 1
 position = Vector2(90.570786, 110.94991)
 scale = Vector2(0.5586064, 0.5586064)
 sprite_frames = SubResource("SpriteFrames_bmxlf")
@@ -498,6 +695,7 @@ sprite_frames = SubResource("SpriteFrames_5jffn")
 stream = ExtResource("26_yunic")
 
 [node name="AwareSprite" type="AnimatedSprite2D" parent="Robots/TheAware"]
+z_index = 10
 position = Vector2(570, 312)
 scale = Vector2(0.5244999, 0.5244999)
 sprite_frames = SubResource("SpriteFrames_kpo4j")
@@ -576,11 +774,37 @@ script = ExtResource("40_65yj4")
 
 [node name="ShockButton" type="Button" parent="Shock"]
 z_index = 30
-offset_left = 839.0
-offset_top = 278.0
-offset_right = 909.0
-offset_bottom = 373.0
-text = "shock"
+offset_left = 831.0
+offset_top = 267.0
+offset_right = 919.0
+offset_bottom = 386.4286
+theme_override_styles/focus = SubResource("StyleBoxEmpty_1tg7v")
+text = "
+"
+flat = true
+
+[node name="Shock_Icon" type="AnimatedSprite2D" parent="Shock"]
+z_index = 30
+texture_filter = 1
+position = Vector2(879.00006, 351)
+scale = Vector2(0.7624998, 0.7624998)
+sprite_frames = SubResource("SpriteFrames_o76y0")
+animation = &"Off"
+autoplay = "Off"
+
+[node name="Sparks" type="GPUParticles2D" parent="Shock"]
+z_index = 10
+texture_filter = 1
+position = Vector2(879, 329)
+emitting = false
+amount = 25
+texture = ExtResource("52_1tg7v")
+lifetime = 2.0
+one_shot = true
+preprocess = 0.91
+speed_scale = 3.65
+randomness = 0.16
+process_material = SubResource("ParticleProcessMaterial_20x37")
 
 [node name="ShockStatus" type="Node" parent="."]
 script = ExtResource("41_x68vh")
@@ -703,24 +927,46 @@ anchor_left = 1.0
 anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
-offset_left = -133.0
-offset_top = -102.99994
-offset_right = -52.3396
-offset_bottom = -27.999939
+offset_left = -197.99994
+offset_top = -122.75073
+offset_right = -106.081055
+offset_bottom = -30.83191
 grow_horizontal = 0
 grow_vertical = 0
 scale = Vector2(0.99369806, 1.0365038)
 size_flags_horizontal = 4
-text = "blink
-"
+theme_override_styles/focus = SubResource("StyleBoxEmpty_1cppf")
+flat = true
 script = ExtResource("55_2m4s1")
+
+[node name="Blink_Icon" type="AnimatedSprite2D" parent="Camera/Blink/BlinkButton"]
+texture_filter = 1
+position = Vector2(46.29168, 45.10424)
+scale = Vector2(1.7309082, 1.6594248)
+sprite_frames = SubResource("SpriteFrames_a7h6w")
+animation = &"Open"
+autoplay = "Open"
 
 [node name="BlinkSprite" type="AnimatedSprite2D" parent="Camera/Blink"]
 visible = false
 z_index = 450
+texture_filter = 1
 position = Vector2(602, 350)
 scale = Vector2(14.162498, 8.197499)
 sprite_frames = SubResource("SpriteFrames_4kpch")
+animation = &"Close"
+
+[node name="BG" type="Node" parent="."]
+
+[node name="BG" type="Sprite2D" parent="BG"]
+texture_filter = 1
+position = Vector2(568, 269)
+scale = Vector2(0.89031243, 0.8903125)
+texture = ExtResource("70_n44lc")
+
+[node name="GR" type="Sprite2D" parent="BG"]
+position = Vector2(586, 763.125)
+texture = ExtResource("71_a8b36")
 
 [connection signal="button_down" from="Power/Powersupply" to="Power" method="_on_powersupply_button_down"]
 [connection signal="button_up" from="Power/Powersupply" to="Power" method="_on_powersupply_button_up"]
