@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cpmfdqwmnc3d8"
-path="res://.godot/imported/chargeoff.png-b2568d44a5b7b4576869f1563e0b3507.ctex"
+uid="uid://cgf787wk2ni1o"
+path="res://.godot/imported/temp_midbg.png-81de94ea549394dfed5a0c05876ebd4a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Tools/Charger/chargeoff.png"
-dest_files=["res://.godot/imported/chargeoff.png-b2568d44a5b7b4576869f1563e0b3507.ctex"]
+source_file="res://Assets/Background/temp_midbg.png"
+dest_files=["res://.godot/imported/temp_midbg.png-81de94ea549394dfed5a0c05876ebd4a.ctex"]
 
 [params]
 

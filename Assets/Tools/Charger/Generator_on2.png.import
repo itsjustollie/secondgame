@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://se82gfijdrnh"
-path="res://.godot/imported/chargeon2.png-a8c5bec702333cb8c41a24ccbb6de6f0.ctex"
+uid="uid://cntljkmetxi05"
+path="res://.godot/imported/Generator_on2.png-fb5939fb4d9881894baf131e62256c6f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Tools/Charger/chargeon2.png"
-dest_files=["res://.godot/imported/chargeon2.png-a8c5bec702333cb8c41a24ccbb6de6f0.ctex"]
+source_file="res://Assets/Tools/Charger/Generator_on2.png"
+dest_files=["res://.godot/imported/Generator_on2.png-fb5939fb4d9881894baf131e62256c6f.ctex"]
 
 [params]
 

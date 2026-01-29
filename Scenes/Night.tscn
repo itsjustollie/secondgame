@@ -1,10 +1,11 @@
-[gd_scene load_steps=93 format=3 uid="uid://btspxe0fqidd1"]
+[gd_scene load_steps=98 format=3 uid="uid://btspxe0fqidd1"]
 
 [ext_resource type="Script" uid="uid://crj28w3fh4vvr" path="res://Scripts/heating.gd" id="1_d0ro7"]
 [ext_resource type="Script" uid="uid://bd3alhuf38w7i" path="res://Scripts/power.gd" id="2_uwk6c"]
-[ext_resource type="Texture2D" uid="uid://btmwiu1a2mdsb" path="res://Assets/Tools/Charger/chargeon1.png" id="3_k7xkd"]
-[ext_resource type="Texture2D" uid="uid://se82gfijdrnh" path="res://Assets/Tools/Charger/chargeon2.png" id="4_64id4"]
-[ext_resource type="Texture2D" uid="uid://cpmfdqwmnc3d8" path="res://Assets/Tools/Charger/chargeoff.png" id="5_l7y8l"]
+[ext_resource type="Texture2D" uid="uid://mrefr1dolnuq" path="res://Assets/Tools/Charger/Generator_on1.png" id="3_iu7dq"]
+[ext_resource type="Texture2D" uid="uid://cntljkmetxi05" path="res://Assets/Tools/Charger/Generator_on2.png" id="4_wahdi"]
+[ext_resource type="Texture2D" uid="uid://1qul34nod2yk" path="res://Assets/Tools/Charger/Generator_on3.png" id="5_lwyey"]
+[ext_resource type="Texture2D" uid="uid://3ef7hl6eno1v" path="res://Assets/Tools/Charger/Generator_off.png" id="6_1cppf"]
 [ext_resource type="Script" uid="uid://dj8jrsn5802dw" path="res://Scripts/screen.gd" id="6_qupvh"]
 [ext_resource type="Texture2D" uid="uid://d2rsddiym5ss5" path="res://Assets/Tools/Screen/Screen.png" id="7_75tmy"]
 [ext_resource type="Script" uid="uid://bvgu2g7pv4xn7" path="res://Scripts/screen_status.gd" id="8_637a8"]
@@ -53,27 +54,37 @@
 [ext_resource type="Script" uid="uid://djn6lfuq668jw" path="res://Scripts/shock_status.gd" id="41_x68vh"]
 [ext_resource type="Script" uid="uid://de6jmf5hqkgxr" path="res://Scripts/downloads.gd" id="42_7umhw"]
 [ext_resource type="Script" uid="uid://c3tm8hswsqwl4" path="res://Scripts/tasks.gd" id="43_bxs6h"]
+[ext_resource type="Script" uid="uid://bbmjn1gwr4nvq" path="res://Scripts/panel.gd" id="53_jhnia"]
+[ext_resource type="Script" uid="uid://ctekpmu6n2rni" path="res://Scripts/camera.gd" id="54_hh621"]
+[ext_resource type="Script" uid="uid://3irxa02xj7hm" path="res://Scripts/blink_button.gd" id="55_2m4s1"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_jw32o"]
-atlas = ExtResource("3_k7xkd")
-region = Rect2(0, 0, 1000, 1000)
+[sub_resource type="AtlasTexture" id="AtlasTexture_mab3i"]
+atlas = ExtResource("3_iu7dq")
+region = Rect2(0, 0, 400, 400)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_50glp"]
-atlas = ExtResource("4_64id4")
-region = Rect2(0, 0, 1000, 1000)
+[sub_resource type="AtlasTexture" id="AtlasTexture_1tg7v"]
+atlas = ExtResource("4_wahdi")
+region = Rect2(0, 0, 400, 400)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_vy5pj"]
-atlas = ExtResource("5_l7y8l")
-region = Rect2(0, 0, 1000, 1000)
+[sub_resource type="AtlasTexture" id="AtlasTexture_6nivd"]
+atlas = ExtResource("5_lwyey")
+region = Rect2(0, 0, 400, 400)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4lb3r"]
+atlas = ExtResource("6_1cppf")
+region = Rect2(0, 0, 400, 400)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_bmxlf"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_jw32o")
+"texture": SubResource("AtlasTexture_mab3i")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_50glp")
+"texture": SubResource("AtlasTexture_1tg7v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6nivd")
 }],
 "loop": true,
 "name": &"ON",
@@ -81,7 +92,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_vy5pj")
+"texture": SubResource("AtlasTexture_4lb3r")
 }],
 "loop": true,
 "name": &"default",
@@ -97,21 +108,6 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_v1gob")
-}],
-"loop": true,
-"name": &"default",
-"speed": 5.0
-}]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_bmxlf"]
-atlas = ExtResource("10_jkcd8")
-region = Rect2(0, 0, 100, 100)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_4kpch"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_bmxlf")
 }],
 "loop": true,
 "name": &"default",
@@ -229,6 +225,21 @@ animations = [{
 "speed": 24.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_4n42c"]
+atlas = ExtResource("25_6bhsf")
+region = Rect2(0, 0, 1000, 500)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5jffn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4n42c")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_3tgeq"]
 atlas = ExtResource("19_mab3i")
 region = Rect2(0, 0, 1000, 1000)
@@ -289,21 +300,6 @@ animations = [{
 }],
 "loop": true,
 "name": &"aware_shocked",
-"speed": 5.0
-}]
-
-[sub_resource type="AtlasTexture" id="AtlasTexture_4n42c"]
-atlas = ExtResource("25_6bhsf")
-region = Rect2(0, 0, 1000, 500)
-
-[sub_resource type="SpriteFrames" id="SpriteFrames_5jffn"]
-animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_4n42c")
-}],
-"loop": true,
-"name": &"default",
 "speed": 5.0
 }]
 
@@ -391,6 +387,21 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="AtlasTexture" id="AtlasTexture_bmxlf"]
+atlas = ExtResource("10_jkcd8")
+region = Rect2(0, 0, 100, 100)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_4kpch"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bmxlf")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
 [node name="Node2D" type="Node2D"]
 
 [node name="Heating" type="Node" parent="."]
@@ -400,7 +411,7 @@ script = ExtResource("1_d0ro7")
 script = ExtResource("2_uwk6c")
 
 [node name="Powersupply" type="Button" parent="Power"]
-z_index = 50
+z_index = 30
 offset_left = 31.0
 offset_top = 192.0
 offset_right = 200.0
@@ -411,45 +422,15 @@ theme_override_colors/font_focus_color = Color(0.9490196, 0.9490196, 0.9490196, 
 metadata/_edit_use_anchors_ = true
 
 [node name="ChargeSprite" type="AnimatedSprite2D" parent="Power/Powersupply"]
-position = Vector2(101.99999, 119.00003)
-scale = Vector2(0.32400003, 0.32400003)
+z_index = 30
+position = Vector2(90.570786, 110.94991)
+scale = Vector2(0.5586064, 0.5586064)
 sprite_frames = SubResource("SpriteFrames_bmxlf")
 autoplay = "default"
-
-[node name="Panel" type="Panel" parent="Power"]
-offset_right = 170.0
-offset_bottom = 55.0
-scale = Vector2(0.99369806, 1.0365038)
-metadata/_edit_use_anchors_ = true
-
-[node name="Powerlabel" type="Label" parent="Power/Panel"]
-z_index = 600
-layout_mode = 1
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -66.0
-offset_top = -17.5
-offset_right = 66.0
-offset_bottom = 17.5
-grow_horizontal = 2
-grow_vertical = 2
-theme_override_font_sizes/font_size = 25
-text = "Power: 100"
-metadata/_edit_use_anchors_ = true
+frame_progress = 0.38691625
 
 [node name="Screen" type="Node" parent="."]
 script = ExtResource("6_qupvh")
-
-[node name="ScreenSprite" type="AnimatedSprite2D" parent="Screen"]
-visible = false
-z_index = 100
-position = Vector2(564, 373.00003)
-scale = Vector2(1.0252837, 1.0694498)
-sprite_frames = SubResource("SpriteFrames_jw32o")
-autoplay = "default"
 
 [node name="ScreenButton" type="Button" parent="Screen"]
 z_index = 120
@@ -461,29 +442,16 @@ scale = Vector2(0.99369806, 1.0365038)
 text = "Screen
 "
 
+[node name="ScreenSprite" type="AnimatedSprite2D" parent="Screen"]
+visible = false
+z_index = 100
+position = Vector2(564, 373.00003)
+scale = Vector2(1.0252837, 1.0694498)
+sprite_frames = SubResource("SpriteFrames_jw32o")
+autoplay = "default"
+
 [node name="ScreenStatus" type="Node" parent="."]
 script = ExtResource("8_637a8")
-
-[node name="Blink" type="Node" parent="."]
-script = ExtResource("9_w3en0")
-
-[node name="BlinkButton" type="Button" parent="Blink"]
-z_index = 500
-offset_left = 1035.0
-offset_top = 552.0
-offset_right = 1115.6604
-offset_bottom = 627.0
-scale = Vector2(0.99369806, 1.0365038)
-text = "blink
-"
-metadata/_edit_use_anchors_ = true
-
-[node name="BlinkSprite" type="AnimatedSprite2D" parent="Blink"]
-visible = false
-z_index = 450
-position = Vector2(602, 350)
-scale = Vector2(14.162498, 8.197499)
-sprite_frames = SubResource("SpriteFrames_4kpch")
 
 [node name="BlinkStatus" type="Node" parent="."]
 script = ExtResource("11_hb331")
@@ -516,13 +484,6 @@ stream = ExtResource("17_lwyey")
 [node name="TheAware" type="Node" parent="Robots"]
 script = ExtResource("18_1cppf")
 
-[node name="AwareSprite" type="AnimatedSprite2D" parent="Robots/TheAware"]
-position = Vector2(570, 312)
-scale = Vector2(0.5244999, 0.5244999)
-sprite_frames = SubResource("SpriteFrames_kpo4j")
-animation = &"Hide"
-autoplay = "Hide"
-
 [node name="AwareShocked" type="AudioStreamPlayer2D" parent="Robots/TheAware"]
 stream = ExtResource("24_576as")
 
@@ -535,6 +496,13 @@ sprite_frames = SubResource("SpriteFrames_5jffn")
 
 [node name="Aware_Jumpscaresound" type="AudioStreamPlayer2D" parent="Robots/TheAware"]
 stream = ExtResource("26_yunic")
+
+[node name="AwareSprite" type="AnimatedSprite2D" parent="Robots/TheAware"]
+position = Vector2(570, 312)
+scale = Vector2(0.5244999, 0.5244999)
+sprite_frames = SubResource("SpriteFrames_kpo4j")
+animation = &"Hide"
+autoplay = "Hide"
 
 [node name="Stall" type="Node" parent="Robots"]
 script = ExtResource("27_jol3d")
@@ -607,6 +575,7 @@ stream = ExtResource("39_qxgqg")
 script = ExtResource("40_65yj4")
 
 [node name="ShockButton" type="Button" parent="Shock"]
+z_index = 30
 offset_left = 839.0
 offset_top = 278.0
 offset_right = 909.0
@@ -692,13 +661,73 @@ text = "0%"
 [node name="Tasks" type="Node" parent="."]
 script = ExtResource("43_bxs6h")
 
+[node name="Camera" type="Camera2D" parent="."]
+position = Vector2(575, 323)
+script = ExtResource("54_hh621")
+
+[node name="Panel" type="Panel" parent="Camera"]
+z_index = 30
+offset_left = -575.0
+offset_top = -323.0
+offset_right = -405.0
+offset_bottom = -268.0
+scale = Vector2(0.99369806, 1.0365038)
+script = ExtResource("53_jhnia")
+metadata/_edit_use_anchors_ = true
+
+[node name="Powerlabel" type="Label" parent="Camera/Panel"]
+z_index = 600
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -66.0
+offset_top = -17.5
+offset_right = 66.0
+offset_bottom = 17.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 25
+text = "Power: 100"
+metadata/_edit_use_anchors_ = true
+
+[node name="Blink" type="Node" parent="Camera"]
+script = ExtResource("9_w3en0")
+
+[node name="BlinkButton" type="Button" parent="Camera/Blink"]
+z_index = 500
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -133.0
+offset_top = -102.99994
+offset_right = -52.3396
+offset_bottom = -27.999939
+grow_horizontal = 0
+grow_vertical = 0
+scale = Vector2(0.99369806, 1.0365038)
+size_flags_horizontal = 4
+text = "blink
+"
+script = ExtResource("55_2m4s1")
+
+[node name="BlinkSprite" type="AnimatedSprite2D" parent="Camera/Blink"]
+visible = false
+z_index = 450
+position = Vector2(602, 350)
+scale = Vector2(14.162498, 8.197499)
+sprite_frames = SubResource("SpriteFrames_4kpch")
+
 [connection signal="button_down" from="Power/Powersupply" to="Power" method="_on_powersupply_button_down"]
 [connection signal="button_up" from="Power/Powersupply" to="Power" method="_on_powersupply_button_up"]
 [connection signal="button_down" from="Screen/ScreenButton" to="Screen" method="_on_screen_button_button_down"]
 [connection signal="button_up" from="Screen/ScreenButton" to="Screen" method="_on_screen_button_button_up"]
 [connection signal="pressed" from="Screen/ScreenButton" to="Power" method="_on_screen_button_pressed"]
 [connection signal="pressed" from="Screen/ScreenButton" to="Screen" method="_on_screen_button_pressed"]
-[connection signal="pressed" from="Blink/BlinkButton" to="Blink" method="_on_blink_button_pressed"]
 [connection signal="button_up" from="Robots/Stall/error1" to="Robots/Stall" method="_on_error_1_button_up"]
 [connection signal="toggled" from="Robots/Stall/error1" to="Robots/Stall" method="_on_error_1_toggled"]
 [connection signal="pressed" from="Robots/Crooked/HeatButton" to="Robots/Crooked" method="_on_heat_button_pressed"]
@@ -711,3 +740,4 @@ script = ExtResource("43_bxs6h")
 [connection signal="button_up" from="Downloads/File 2" to="Downloads" method="_on_file_2_button_up"]
 [connection signal="button_down" from="Downloads/File 3" to="Downloads" method="_on_file_3_button_down"]
 [connection signal="button_up" from="Downloads/File 3" to="Downloads" method="_on_file_3_button_up"]
+[connection signal="pressed" from="Camera/Blink/BlinkButton" to="Camera/Blink" method="_on_blink_button_pressed"]

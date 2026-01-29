@@ -1,6 +1,6 @@
 extends Node
 
-@onready var powerlabel: Label = $Panel/Powerlabel
+@onready var powerlabel: Label = $"../Camera/Panel/Powerlabel"
 @onready var charge_sprite: AnimatedSprite2D = $Powersupply/ChargeSprite
 
 var regen = false

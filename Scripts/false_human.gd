@@ -39,9 +39,6 @@ func _process(delta: float) -> void:
 		State.JUMPSCARE:
 			handle_jumpscare(delta)
 
-
-# ---------------- STATES ----------------
-
 func handle_idle():
 	if time >= 5.0:
 		time = 0.0
@@ -52,12 +49,12 @@ func handle_idle():
 func handle_waiting(delta):
 	kill_time -= delta
 
-	# Blink cancels attack
+
 	if BlinkStatus.blink_active and BlinkStatus.blink_time >= 3.0:
 		cancel_attack()
 		return
 
-	# Time's up → jumpscare
+
 	if kill_time <= 0.0:
 		start_jumpscare()
 
@@ -67,15 +64,12 @@ func handle_jumpscare(delta):
 	if jumpscare_time >= 1.2:
 		get_tree().change_scene_to_file("res://Scenes/die.tscn")
 
-
-# ---------------- ACTIONS ----------------
-
 func start_attack():
 	state = State.PUT_UP
 	false_sprite.show()
 	false_sprite.play("default") # put-up animation
 	breathing.play()
-	kill_time = randi_range(8, 9)
+	kill_time = randi_range(7, 8)
 
 
 func start_jumpscare():
@@ -92,9 +86,6 @@ func cancel_attack():
 	breathing.stop()
 	leave.play()
 	time = 0.0
-
-
-# ---------------- ANIMATION CALLBACK ----------------
 
 func _on_animation_finished():
 	match state:
