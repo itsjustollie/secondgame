@@ -1,4 +1,4 @@
-[gd_scene load_steps=137 format=3 uid="uid://btspxe0fqidd1"]
+[gd_scene load_steps=143 format=3 uid="uid://btspxe0fqidd1"]
 
 [ext_resource type="Script" uid="uid://crj28w3fh4vvr" path="res://Scripts/heating.gd" id="1_d0ro7"]
 [ext_resource type="Script" uid="uid://bd3alhuf38w7i" path="res://Scripts/power.gd" id="2_uwk6c"]
@@ -8,7 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://3ef7hl6eno1v" path="res://Assets/Tools/Charger/Generator_off.png" id="6_1cppf"]
 [ext_resource type="Script" uid="uid://dj8jrsn5802dw" path="res://Scripts/screen.gd" id="6_qupvh"]
 [ext_resource type="Texture2D" uid="uid://d2rsddiym5ss5" path="res://Assets/Tools/Screen/Screen.png" id="7_75tmy"]
+[ext_resource type="Texture2D" uid="uid://df32obucu0lhd" path="res://Assets/Tools/Screen/screen_button.png" id="8_2v721"]
 [ext_resource type="Script" uid="uid://bvgu2g7pv4xn7" path="res://Scripts/screen_status.gd" id="8_637a8"]
+[ext_resource type="Texture2D" uid="uid://rxs82jiwnvdp" path="res://Assets/Tools/Screen/screen_button_down.png" id="9_gjii0"]
 [ext_resource type="Script" uid="uid://bxy2tl5q241fx" path="res://Scripts/blink.gd" id="9_w3en0"]
 [ext_resource type="Texture2D" uid="uid://wvq61doly7tr" path="res://Assets/Tools/Blink/blink.png" id="10_jkcd8"]
 [ext_resource type="Script" uid="uid://b4ujlfkjd0f5c" path="res://Scripts/blink_status.gd" id="11_hb331"]
@@ -115,6 +117,8 @@ animations = [{
 "speed": 5.0
 }]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_gjii0"]
+
 [sub_resource type="AtlasTexture" id="AtlasTexture_v1gob"]
 atlas = ExtResource("7_75tmy")
 region = Rect2(0, 0, 1000, 700)
@@ -127,6 +131,33 @@ animations = [{
 }],
 "loop": true,
 "name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_smmc4"]
+atlas = ExtResource("9_gjii0")
+region = Rect2(0, 0, 400, 50)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b3f0h"]
+atlas = ExtResource("8_2v721")
+region = Rect2(0, 0, 400, 50)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xx8or"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_smmc4")
+}],
+"loop": true,
+"name": &"Click",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b3f0h")
+}],
+"loop": true,
+"name": &"Normal",
 "speed": 5.0
 }]
 
@@ -435,7 +466,7 @@ animations = [{
 [sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_20x37"]
 particle_flag_disable_z = true
 emission_shape = 1
-emission_sphere_radius = 60.56
+emission_sphere_radius = 33.27
 angle_min = 1.0728835e-05
 angle_max = 1.0728835e-05
 inherit_velocity_ratio = 0.975
@@ -631,13 +662,14 @@ script = ExtResource("6_qupvh")
 
 [node name="ScreenButton" type="Button" parent="Screen"]
 z_index = 120
-offset_left = 356.0
-offset_top = 573.0
-offset_right = 784.0
-offset_bottom = 626.0
+offset_left = 365.0
+offset_top = 573.00006
+offset_right = 790.70703
+offset_bottom = 632.9297
 scale = Vector2(0.99369806, 1.0365038)
-text = "Screen
-"
+theme_override_styles/focus = SubResource("StyleBoxEmpty_gjii0")
+text = "screen"
+icon_alignment = 1
 
 [node name="ScreenSprite" type="AnimatedSprite2D" parent="Screen"]
 visible = false
@@ -646,6 +678,15 @@ position = Vector2(564, 373.00003)
 scale = Vector2(1.0252837, 1.0694498)
 sprite_frames = SubResource("SpriteFrames_jw32o")
 autoplay = "default"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Screen"]
+z_index = 120
+texture_filter = 1
+position = Vector2(577, 603)
+scale = Vector2(1.06, 1.06)
+sprite_frames = SubResource("SpriteFrames_xx8or")
+animation = &"Normal"
+autoplay = "Normal"
 
 [node name="ScreenStatus" type="Node" parent="."]
 script = ExtResource("8_637a8")
@@ -786,7 +827,7 @@ flat = true
 [node name="Shock_Icon" type="AnimatedSprite2D" parent="Shock"]
 z_index = 30
 texture_filter = 1
-position = Vector2(879.00006, 351)
+position = Vector2(875.00006, 350)
 scale = Vector2(0.7624998, 0.7624998)
 sprite_frames = SubResource("SpriteFrames_o76y0")
 animation = &"Off"
@@ -795,7 +836,7 @@ autoplay = "Off"
 [node name="Sparks" type="GPUParticles2D" parent="Shock"]
 z_index = 10
 texture_filter = 1
-position = Vector2(879, 329)
+position = Vector2(875, 331)
 emitting = false
 amount = 25
 texture = ExtResource("52_1tg7v")
@@ -803,7 +844,7 @@ lifetime = 2.0
 one_shot = true
 preprocess = 0.91
 speed_scale = 3.65
-randomness = 0.16
+randomness = 0.3
 process_material = SubResource("ParticleProcessMaterial_20x37")
 
 [node name="ShockStatus" type="Node" parent="."]
@@ -960,12 +1001,13 @@ animation = &"Close"
 
 [node name="BG" type="Sprite2D" parent="BG"]
 texture_filter = 1
-position = Vector2(568, 269)
+position = Vector2(568, 269.125)
 scale = Vector2(0.89031243, 0.8903125)
 texture = ExtResource("70_n44lc")
 
 [node name="GR" type="Sprite2D" parent="BG"]
-position = Vector2(586, 763.125)
+z_index = 1
+position = Vector2(586, 763.25)
 texture = ExtResource("71_a8b36")
 
 [connection signal="button_down" from="Power/Powersupply" to="Power" method="_on_powersupply_button_down"]
