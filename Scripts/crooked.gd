@@ -30,7 +30,7 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	
-	if ScreenStatus.screen_active == true:
+	if ScreenStatus.show == true:
 		crooked_sprite.show()
 		heat_button.show()
 		fan.show()
@@ -54,6 +54,7 @@ func _process(delta: float) -> void:
 		if time >= kill_time:
 			BlinkStatus.blink_active = false
 			ScreenStatus.screen_active = false
+			ScreenStatus.show = false
 			blink_sprite.hide()
 			screen_sprite.hide()
 			attack = false

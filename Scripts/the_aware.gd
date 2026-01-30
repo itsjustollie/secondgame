@@ -65,6 +65,7 @@ func _process(delta: float) -> void:
 		jumpscare_time += delta
 		BlinkStatus.blink_active = false
 		ScreenStatus.screen_active = false
+		ScreenStatus.show = false
 		blink_sprite.hide()
 		screen_sprite.hide()
 		

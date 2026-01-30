@@ -3,6 +3,7 @@ extends Node
 
 @onready var f_1_process: Label = $"File 1/F1process"
 @onready var file_1: Button = $"File 1"
+@onready var file_1_sprite: AnimatedSprite2D = $File1sprite
 
 @onready var f_2_process: Label = $"File 2/F2 process"
 @onready var file_2: Button = $"File 2"
@@ -29,9 +30,10 @@ var f3per = 0
 func _process(delta: float) -> void:
 	
 	#Hidding UI when screen is down
-	if ScreenStatus.screen_active == false:
+	if ScreenStatus.show == false:
 		f_1_process.hide()
 		file_1.hide()
+		file_1_sprite.hide()
 		
 		f_2_process.hide()
 		file_2.hide()
@@ -42,6 +44,7 @@ func _process(delta: float) -> void:
 	else:
 		f_1_process.show()
 		file_1.show()
+		file_1_sprite.show()
 		
 		f_2_process.show()
 		file_2.show()
@@ -88,9 +91,11 @@ func _process(delta: float) -> void:
 #file 1
 func _on_file_1_button_down() -> void:
 	f1on = true
+	file_1_sprite.play("Pressed")
 	
 func _on_file_1_button_up() -> void:
 	f1on = false
+	file_1_sprite.play("idle")
 
 
 #file 2

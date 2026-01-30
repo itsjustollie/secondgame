@@ -79,6 +79,7 @@ func start_jumpscare():
 
 	BlinkStatus.blink_active = false
 	ScreenStatus.screen_active = false
+	ScreenStatus.show = false
 	blink_sprite.hide()
 	screen_sprite.hide()
 	false_sprite.play("Jumpscare")

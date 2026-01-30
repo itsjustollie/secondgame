@@ -20,10 +20,10 @@ func _ready() -> void:
 func _process(delta: float) -> void:
 	
 	#Hidding UI when screen is down
-	if ScreenStatus.screen_active == false and attack == true:
+	if ScreenStatus.show == false and attack == true:
 		error_1.hide()
 		
-	if ScreenStatus.screen_active == true and attack == true:
+	if ScreenStatus.show == true and attack == true:
 		error_1.show()
 		
 	
@@ -43,6 +43,7 @@ func _process(delta: float) -> void:
 		if pause >= 0.8:
 			BlinkStatus.blink_active = false
 			ScreenStatus.screen_active = false
+			ScreenStatus.show = false
 			blink_sprite.hide()
 			screen_sprite.hide()
 			stall_jump.play()
