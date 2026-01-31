@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://w23siur2goqo"
-path="res://.godot/imported/temp_bg.png-81c6d6201d09f68439d952376edd5b2a.ctex"
+uid="uid://bni4up7exh7m6"
+path="res://.godot/imported/Crooked_show1.png-9b18cb9bd7823231595d82deda70b638.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Background/temp_bg.png"
-dest_files=["res://.godot/imported/temp_bg.png-81c6d6201d09f68439d952376edd5b2a.ctex"]
+source_file="res://Assets/Robots/Crooked/Appear/Crooked_show1.png"
+dest_files=["res://.godot/imported/Crooked_show1.png-9b18cb9bd7823231595d82deda70b638.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dye4m7owt58h2"
-path="res://.godot/imported/stall_error.png-1910d33bfb17627ef101db391067ba7a.ctex"
+uid="uid://cxvnpptwaaadv"
+path="res://.godot/imported/aware_off2.png-f48ad3f532b376ebb1531e64e57d5e1c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Robots/Stall/stall_error.png"
-dest_files=["res://.godot/imported/stall_error.png-1910d33bfb17627ef101db391067ba7a.ctex"]
+source_file="res://Assets/Robots/The_Aware/Stage1/aware_off2.png"
+dest_files=["res://.godot/imported/aware_off2.png-f48ad3f532b376ebb1531e64e57d5e1c.ctex"]
 
 [params]
 

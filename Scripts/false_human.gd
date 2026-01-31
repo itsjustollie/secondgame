@@ -71,7 +71,7 @@ func start_attack():
 	false_sprite.show()
 	false_sprite.play("default") # put-up animation
 	breathing.play()
-	kill_time = randi_range(6, 8)
+	kill_time = randi_range(4, 6)
 
 
 func start_jumpscare():

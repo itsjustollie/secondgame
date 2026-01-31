@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bl8k6fuwxlstd"
-path="res://.godot/imported/Crooked_appear.png-4b145c2c4a243a8acf2a36837af6f4c0.ctex"
+uid="uid://cmcpwklbpx0fc"
+path="res://.godot/imported/aware_off.png-a408951ec8c26153333a82f341d555ce.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Robots/Crooked/Crooked_appear.png"
-dest_files=["res://.godot/imported/Crooked_appear.png-4b145c2c4a243a8acf2a36837af6f4c0.ctex"]
+source_file="res://Assets/Robots/The_Aware/Stage1/aware_off.png"
+dest_files=["res://.godot/imported/aware_off.png-a408951ec8c26153333a82f341d555ce.ctex"]
 
 [params]
 

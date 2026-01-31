@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://w23siur2goqo"
-path="res://.godot/imported/temp_bg.png-81c6d6201d09f68439d952376edd5b2a.ctex"
+uid="uid://cu31wvnaenmwo"
+path="res://.godot/imported/aware_s2_1.png-a62f49bcabb5bf9696d46b1c8580b36c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Background/temp_bg.png"
-dest_files=["res://.godot/imported/temp_bg.png-81c6d6201d09f68439d952376edd5b2a.ctex"]
+source_file="res://Assets/Robots/The_Aware/Stage2/aware_s2_1.png"
+dest_files=["res://.godot/imported/aware_s2_1.png-a62f49bcabb5bf9696d46b1c8580b36c.ctex"]
 
 [params]
 

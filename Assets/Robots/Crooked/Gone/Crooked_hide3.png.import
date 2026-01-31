@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://w23siur2goqo"
-path="res://.godot/imported/temp_bg.png-81c6d6201d09f68439d952376edd5b2a.ctex"
+uid="uid://dxbdbu3k7awik"
+path="res://.godot/imported/Crooked_hide3.png-1d23158375a7ed9c191552b062ddfc94.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Background/temp_bg.png"
-dest_files=["res://.godot/imported/temp_bg.png-81c6d6201d09f68439d952376edd5b2a.ctex"]
+source_file="res://Assets/Robots/Crooked/Gone/Crooked_hide3.png"
+dest_files=["res://.godot/imported/Crooked_hide3.png-1d23158375a7ed9c191552b062ddfc94.ctex"]
 
 [params]
 

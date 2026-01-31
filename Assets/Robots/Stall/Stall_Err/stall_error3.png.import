@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://w23siur2goqo"
-path="res://.godot/imported/temp_bg.png-81c6d6201d09f68439d952376edd5b2a.ctex"
+uid="uid://5dlmtvdtmxjy"
+path="res://.godot/imported/stall_error3.png-faa5ab4632e26b9bf47ac6f13ae9bd09.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Background/temp_bg.png"
-dest_files=["res://.godot/imported/temp_bg.png-81c6d6201d09f68439d952376edd5b2a.ctex"]
+source_file="res://Assets/Robots/Stall/Stall_Err/stall_error3.png"
+dest_files=["res://.godot/imported/stall_error3.png-faa5ab4632e26b9bf47ac6f13ae9bd09.ctex"]
 
 [params]
 
