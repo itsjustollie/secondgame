@@ -10,29 +10,53 @@ script = ExtResource("1_3kf3n")
 
 [node name="h0" type="Button" parent="Levels"]
 offset_left = 106.0
-offset_top = 68.0
+offset_top = 12.0
 offset_right = 278.0
-offset_bottom = 137.0
+offset_bottom = 81.0
 text = "Hour 0"
 metadata/_edit_use_anchors_ = true
 
+[node name="h1" type="Button" parent="Levels"]
+offset_left = 106.0
+offset_top = 106.0
+offset_right = 278.0
+offset_bottom = 175.0
+text = "Hour 1"
+
+[node name="h2" type="Button" parent="Levels"]
+offset_left = 106.0
+offset_top = 206.0
+offset_right = 278.0
+offset_bottom = 275.0
+text = "Hour 2"
+
 [node name="h3" type="Button" parent="Levels"]
 offset_left = 106.0
-offset_top = 209.0
+offset_top = 301.0
 offset_right = 278.0
-offset_bottom = 278.0
+offset_bottom = 370.0
 text = "Hour 3"
+
+[node name="h4" type="Button" parent="Levels"]
+offset_left = 108.0
+offset_top = 396.0
+offset_right = 280.0
+offset_bottom = 465.0
+text = "Hour 4"
 
 [node name="h5" type="Button" parent="Levels"]
 offset_left = 106.0
-offset_top = 369.0
+offset_top = 485.0
 offset_right = 278.0
-offset_bottom = 438.0
+offset_bottom = 554.0
 text = "Hour 5"
 
 [node name="Aggresion" type="Node" parent="."]
 script = ExtResource("2_6pedr")
 
 [connection signal="pressed" from="Levels/h0" to="Levels" method="_on_h_0_pressed"]
+[connection signal="pressed" from="Levels/h1" to="Levels" method="_on_h_1_pressed"]
+[connection signal="pressed" from="Levels/h2" to="Levels" method="_on_h_2_pressed"]
 [connection signal="pressed" from="Levels/h3" to="Levels" method="_on_h_3_pressed"]
+[connection signal="pressed" from="Levels/h4" to="Levels" method="_on_h_4_pressed"]
 [connection signal="pressed" from="Levels/h5" to="Levels" method="_on_h_5_pressed"]

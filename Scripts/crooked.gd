@@ -70,12 +70,12 @@ func _process(delta: float) -> void:
 			
 	if Heating.HeatOn == true:
 		HeatTime += delta
-		fan.animation = "On"
+		fan.play("On")
 		if HeatTime >= 3.0:
 			attack = false
 			crooked_sprite.animation = "gone"
 	else:
-		fan.animation = "Off"
+		fan.play("Off")
 		HeatTime = 0.0
 
 func _on_heat_button_pressed() -> void:

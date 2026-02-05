@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://jylb1sd53cvg"
-path="res://.godot/imported/fanon.png-f168489e288c759654e6fd5019c3f92a.ctex"
+uid="uid://ea5gt2ta3pgi"
+path="res://.godot/imported/temp_gr.png-91ed383c44c2ff03ddcc6fe7a7ea4d01.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Tools/Fan/fanon.png"
-dest_files=["res://.godot/imported/fanon.png-f168489e288c759654e6fd5019c3f92a.ctex"]
+source_file="res://Assets/Background/temp_gr.png"
+dest_files=["res://.godot/imported/temp_gr.png-91ed383c44c2ff03ddcc6fe7a7ea4d01.ctex"]
 
 [params]
 

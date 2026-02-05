@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://yo2saek4dr5i"
-path="res://.godot/imported/fanoff.png-64736d81fb9cbda44a2a43a4f75df04d.ctex"
+uid="uid://cwxawrt3pqto0"
+path="res://.godot/imported/aware_s3_1.png-7040579016005981bca9743d03474493.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Tools/Fan/fanoff.png"
-dest_files=["res://.godot/imported/fanoff.png-64736d81fb9cbda44a2a43a4f75df04d.ctex"]
+source_file="res://Assets/Robots/The_Aware/Stage3/aware_s3_1.png"
+dest_files=["res://.godot/imported/aware_s3_1.png-7040579016005981bca9743d03474493.ctex"]
 
 [params]
 

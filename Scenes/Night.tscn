@@ -1,4 +1,4 @@
-[gd_scene load_steps=227 format=3 uid="uid://btspxe0fqidd1"]
+[gd_scene load_steps=238 format=3 uid="uid://btspxe0fqidd1"]
 
 [ext_resource type="Script" uid="uid://crj28w3fh4vvr" path="res://Scripts/heating.gd" id="1_d0ro7"]
 [ext_resource type="Script" uid="uid://bd3alhuf38w7i" path="res://Scripts/power.gd" id="2_uwk6c"]
@@ -43,7 +43,6 @@
 [ext_resource type="Texture2D" uid="uid://wnul4e50u5lk" path="res://Assets/Tools/Screen/Bar/bar6.png" id="21_kgm7n"]
 [ext_resource type="Texture2D" uid="uid://bu7xtwwx2rfx3" path="res://Assets/Tools/Screen/Bar/bar7.png" id="22_1ahpu"]
 [ext_resource type="Texture2D" uid="uid://dbx5cewf15kmy" path="res://Assets/Robots/False_Human/comes_up/False_Human_up9.png" id="22_mab3i"]
-[ext_resource type="Texture2D" uid="uid://bx6axnihvvkx7" path="res://Assets/Robots/The_Aware/aware_stage3.png" id="22_qbdne"]
 [ext_resource type="Texture2D" uid="uid://du8mhc4q7gy4y" path="res://Assets/Tools/Screen/Files/Screenglow.png" id="23_1ahpu"]
 [ext_resource type="Texture2D" uid="uid://bp02juh4ag3gk" path="res://Assets/Robots/False_Human/comes_up/False_Human_up10.png" id="23_1tg7v"]
 [ext_resource type="Texture2D" uid="uid://wvqptmabswmn" path="res://Assets/Robots/The_Aware/aware_shocked.png" id="23_63cb6"]
@@ -56,8 +55,6 @@
 [ext_resource type="Texture2D" uid="uid://cf3klouywnt8m" path="res://Assets/Robots/Stall/Stall_jumpscare.png" id="31_gjii0"]
 [ext_resource type="AudioStream" uid="uid://bueaxbshynnau" path="res://Sound/Robots/Stall/stall_jumpscare.mp3" id="32_6nivd"]
 [ext_resource type="Script" uid="uid://357igas760ux" path="res://Scripts/crooked.gd" id="33_4lb3r"]
-[ext_resource type="Texture2D" uid="uid://yo2saek4dr5i" path="res://Assets/Tools/Fan/fanoff.png" id="36_sarkg"]
-[ext_resource type="Texture2D" uid="uid://jylb1sd53cvg" path="res://Assets/Tools/Fan/fanon.png" id="37_o76y0"]
 [ext_resource type="Texture2D" uid="uid://chnpg4x8ncy4x" path="res://Assets/Robots/Crooked/crooked_jumpscare.png" id="38_uxvug"]
 [ext_resource type="AudioStream" uid="uid://dgbnvcxktq4di" path="res://Sound/Robots/Crooked/crooked_jumpscare.mp3" id="39_qxgqg"]
 [ext_resource type="Script" uid="uid://njcinqu7grh4" path="res://Scripts/shock.gd" id="40_65yj4"]
@@ -82,8 +79,12 @@
 [ext_resource type="Texture2D" uid="uid://o33lk4rqtj01" path="res://Assets/Robots/The_Aware/Stage2/aware_s2_4.png" id="54_oycq0"]
 [ext_resource type="Texture2D" uid="uid://5dlmtvdtmxjy" path="res://Assets/Robots/Stall/Stall_Err/stall_error3.png" id="54_smmc4"]
 [ext_resource type="Script" uid="uid://3irxa02xj7hm" path="res://Scripts/blink_button.gd" id="55_2m4s1"]
+[ext_resource type="Texture2D" uid="uid://cj7b8x4jvuxda" path="res://Assets/Robots/The_Aware/Stage3/aware_s3_0.png" id="56_rtgkt"]
 [ext_resource type="Texture2D" uid="uid://cate8bk5seohw" path="res://Assets/Tools/Blink/blink_close.png" id="57_1cppf"]
+[ext_resource type="Texture2D" uid="uid://cwxawrt3pqto0" path="res://Assets/Robots/The_Aware/Stage3/aware_s3_1.png" id="57_eshay"]
+[ext_resource type="Texture2D" uid="uid://cggp30imvqhpe" path="res://Assets/Robots/The_Aware/Stage3/aware_s3_3.png" id="58_k5p2p"]
 [ext_resource type="Texture2D" uid="uid://c8kbwyrjk6p2m" path="res://Assets/Tools/Blink/blink_open.png" id="58_mab3i"]
+[ext_resource type="Texture2D" uid="uid://pn64fy2yn0i5" path="res://Assets/Robots/The_Aware/Stage3/aware_s3_2.png" id="59_ngsao"]
 [ext_resource type="Texture2D" uid="uid://bdki47llhfvbc" path="res://Assets/Robots/Crooked/Appear/Crooked_glitch.png" id="60_h3o8h"]
 [ext_resource type="Texture2D" uid="uid://bni4up7exh7m6" path="res://Assets/Robots/Crooked/Appear/Crooked_show1.png" id="60_upusl"]
 [ext_resource type="Texture2D" uid="uid://cnr74cwxbsxyg" path="res://Assets/Robots/Crooked/Gone/Crooked_hide4.png" id="61_b3f0h"]
@@ -103,12 +104,15 @@
 [ext_resource type="FontFile" uid="uid://dxmna8df5piif" path="res://Assets/UI/Minecraft.ttf" id="69_kgm7n"]
 [ext_resource type="Texture2D" uid="uid://bixp2u4ru5alu" path="res://Assets/Tools/Screen/Files/File_stall2.png" id="69_wrw1u"]
 [ext_resource type="Texture2D" uid="uid://drcplh7wu1dkg" path="res://Assets/Tools/Screen/Files/File_stall3.png" id="70_kgm7n"]
-[ext_resource type="Texture2D" uid="uid://w23siur2goqo" path="res://Assets/Background/temp_bg.png" id="70_n44lc"]
 [ext_resource type="Texture2D" uid="uid://bw0vit2bsvtlq" path="res://Assets/Tools/Screen/Files/File_stall4.png" id="71_1ahpu"]
-[ext_resource type="Texture2D" uid="uid://bhqj42o6fwaa0" path="res://Assets/Background/GRBG.png" id="71_a8b36"]
 [ext_resource type="Texture2D" uid="uid://byw5h786uaxv8" path="res://Assets/Tools/Screen/Files/File_stall1.png" id="72_3rfhh"]
+[ext_resource type="Texture2D" uid="uid://xhhm3qxg1p1h" path="res://Assets/Tools/Fan/Fan_off.png" id="79_eshay"]
+[ext_resource type="Texture2D" uid="uid://j41v1iv34g4f" path="res://Assets/Tools/Fan/Fan_on1.png" id="80_k5p2p"]
+[ext_resource type="Texture2D" uid="uid://cmeobigr3vgun" path="res://Assets/Tools/Fan/Fan_on2.png" id="81_ngsao"]
 [ext_resource type="Texture2D" uid="uid://i1jovbcxib2o" path="res://Assets/Background/wires_bg.png" id="101_kpttb"]
 [ext_resource type="Texture2D" uid="uid://jqyvnjnahrm2" path="res://Assets/Background/wires2_bg.png" id="102_cmc7d"]
+[ext_resource type="Texture2D" uid="uid://7w36pxb34584" path="res://Assets/Background/background_office.png" id="109_rtgkt"]
+[ext_resource type="Texture2D" uid="uid://cjbhjrmurb6so" path="res://Assets/Background/table_office.png" id="112_rtgkt"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mab3i"]
 
@@ -510,8 +514,24 @@ region = Rect2(0, 0, 1000, 1000)
 atlas = ExtResource("53_fp0h8")
 region = Rect2(0, 0, 1000, 1000)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_5jffn"]
-atlas = ExtResource("22_qbdne")
+[sub_resource type="AtlasTexture" id="AtlasTexture_55iwi"]
+atlas = ExtResource("56_rtgkt")
+region = Rect2(0, 0, 1000, 1000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1dttt"]
+atlas = ExtResource("57_eshay")
+region = Rect2(0, 0, 1000, 1000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kgfoo"]
+atlas = ExtResource("58_k5p2p")
+region = Rect2(0, 0, 1000, 1000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yu7v7"]
+atlas = ExtResource("57_eshay")
+region = Rect2(0, 0, 1000, 1000)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5831n"]
+atlas = ExtResource("59_ngsao")
 region = Rect2(0, 0, 1000, 1000)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_hwpts"]
@@ -545,6 +565,9 @@ animations = [{
 "texture": SubResource("AtlasTexture_4rms6")
 }, {
 "duration": 1.0,
+"texture": SubResource("AtlasTexture_1s0cl")
+}, {
+"duration": 1.0,
 "texture": SubResource("AtlasTexture_5y2c2")
 }],
 "loop": true,
@@ -573,11 +596,23 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_5jffn")
+"texture": SubResource("AtlasTexture_55iwi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1dttt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kgfoo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yu7v7")
+}, {
+"duration": 2.0,
+"texture": SubResource("AtlasTexture_5831n")
 }],
 "loop": true,
 "name": &"Stage3",
-"speed": 5.0
+"speed": 24.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -769,31 +804,38 @@ animations = [{
 "speed": 24.0
 }]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_clvyn"]
-atlas = ExtResource("36_sarkg")
-region = Rect2(0, 0, 100, 100)
+[sub_resource type="AtlasTexture" id="AtlasTexture_5p6qp"]
+atlas = ExtResource("79_eshay")
+region = Rect2(0, 0, 200, 100)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_d8m2u"]
-atlas = ExtResource("37_o76y0")
-region = Rect2(0, 0, 100, 100)
+[sub_resource type="AtlasTexture" id="AtlasTexture_xi7o8"]
+atlas = ExtResource("80_k5p2p")
+region = Rect2(0, 0, 200, 100)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b3twg"]
+atlas = ExtResource("81_ngsao")
+region = Rect2(0, 0, 200, 100)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_5psol"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_clvyn")
+"texture": SubResource("AtlasTexture_5p6qp")
 }],
 "loop": true,
 "name": &"Off",
 "speed": 5.0
 }, {
 "frames": [{
-"duration": 1.0,
-"texture": SubResource("AtlasTexture_d8m2u")
+"duration": 12.0,
+"texture": SubResource("AtlasTexture_xi7o8")
+}, {
+"duration": 12.0,
+"texture": SubResource("AtlasTexture_b3twg")
 }],
 "loop": true,
 "name": &"On",
-"speed": 5.0
+"speed": 24.0
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_5psol"]
@@ -855,6 +897,10 @@ gravity = Vector3(0, 98, 0)
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kgm7n"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3rfhh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rtgkt"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_eshay"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_wb1pn"]
 atlas = ExtResource("69_wrw1u")
@@ -1074,10 +1120,10 @@ script = ExtResource("2_uwk6c")
 
 [node name="Powersupply" type="Button" parent="Power"]
 z_index = 30
-offset_left = 31.0
-offset_top = 192.0
-offset_right = 200.0
-offset_bottom = 421.0
+offset_left = 111.0
+offset_top = 118.0
+offset_right = 280.0
+offset_bottom = 347.0
 scale = Vector2(0.99369806, 1.0365038)
 theme_override_colors/font_color = Color(0.8745098, 0.8745098, 0.8745098, 0)
 theme_override_colors/font_focus_color = Color(0.9490196, 0.9490196, 0.9490196, 1)
@@ -1117,7 +1163,7 @@ texture_filter = 1
 position = Vector2(570, 521)
 scale = Vector2(1.0252837, 1.0694498)
 sprite_frames = SubResource("SpriteFrames_jw32o")
-animation = &"Open"
+animation = &"Close"
 autoplay = "Open"
 
 [node name="Screenbuttronsprite" type="AnimatedSprite2D" parent="Screen"]
@@ -1159,12 +1205,13 @@ script = ExtResource("11_hb331")
 script = ExtResource("12_hh621")
 
 [node name="FalseSprite" type="AnimatedSprite2D" parent="Robots/FalseHuman"]
-visible = false
-z_index = 50
+z_index = 55
 texture_filter = 1
-position = Vector2(669, 349.99997)
-scale = Vector2(1.2179999, 1.2179999)
+position = Vector2(683, 255)
+scale = Vector2(1.043, 1.043)
 sprite_frames = SubResource("SpriteFrames_h1m7h")
+frame = 12
+frame_progress = 1.0
 
 [node name="Leave" type="AudioStreamPlayer2D" parent="Robots/FalseHuman"]
 position = Vector2(593, 436)
@@ -1196,12 +1243,13 @@ stream = ExtResource("26_yunic")
 
 [node name="AwareSprite" type="AnimatedSprite2D" parent="Robots/TheAware"]
 z_index = 10
-position = Vector2(570, 312)
+texture_filter = 1
+position = Vector2(570, 277)
 scale = Vector2(0.5244999, 0.5244999)
 sprite_frames = SubResource("SpriteFrames_kpo4j")
-animation = &"Stage2"
+animation = &"Hide"
 autoplay = "Hide"
-frame_progress = 0.51591796
+frame_progress = 0.8738736
 
 [node name="Stall" type="Node" parent="Robots"]
 script = ExtResource("27_jol3d")
@@ -1255,11 +1303,13 @@ offset_left = 689.0
 offset_top = 422.0
 offset_right = 801.0
 offset_bottom = 456.0
+theme_override_fonts/font = ExtResource("69_kgm7n")
 text = "Heating"
 
 [node name="Fan" type="AnimatedSprite2D" parent="Robots/Crooked"]
 visible = false
 z_index = 120
+texture_filter = 1
 position = Vector2(901, 466)
 sprite_frames = SubResource("SpriteFrames_5psol")
 animation = &"On"
@@ -1279,10 +1329,10 @@ script = ExtResource("40_65yj4")
 
 [node name="ShockButton" type="Button" parent="Shock"]
 z_index = 30
-offset_left = 831.0
-offset_top = 267.0
-offset_right = 919.0
-offset_bottom = 386.4286
+offset_left = 841.4999
+offset_top = 185.49997
+offset_right = 929.4999
+offset_bottom = 304.92856
 theme_override_styles/focus = SubResource("StyleBoxEmpty_1tg7v")
 text = "
 "
@@ -1291,7 +1341,7 @@ flat = true
 [node name="Shock_Icon" type="AnimatedSprite2D" parent="Shock"]
 z_index = 30
 texture_filter = 1
-position = Vector2(875.00006, 350)
+position = Vector2(885.49994, 268.49997)
 scale = Vector2(0.7624998, 0.7624998)
 sprite_frames = SubResource("SpriteFrames_o76y0")
 animation = &"Off"
@@ -1300,7 +1350,7 @@ autoplay = "Off"
 [node name="Sparks" type="GPUParticles2D" parent="Shock"]
 z_index = 10
 texture_filter = 1
-position = Vector2(875, 331)
+position = Vector2(885.4999, 249.49997)
 emitting = false
 amount = 25
 texture = ExtResource("52_1tg7v")
@@ -1318,11 +1368,12 @@ script = ExtResource("41_x68vh")
 script = ExtResource("42_7umhw")
 
 [node name="File 1" type="Button" parent="Downloads"]
+visible = false
 z_index = 120
-offset_left = 161.0
-offset_top = 137.0
-offset_right = 338.0
-offset_bottom = 201.0
+offset_left = 152.0
+offset_top = 126.0
+offset_right = 346.0
+offset_bottom = 224.0
 theme_override_colors/font_color = Color(0.08984352, 0.99999994, 0.96825784, 1)
 theme_override_styles/normal = SubResource("StyleBoxEmpty_1ahpu")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_kgm7n")
@@ -1330,7 +1381,6 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_3rfhh")
 flat = true
 
 [node name="F1process" type="Label" parent="Downloads/File 1"]
-visible = false
 texture_filter = 1
 layout_mode = 1
 anchors_preset = 6
@@ -1351,12 +1401,14 @@ text = "0%"
 [node name="File 2" type="Button" parent="Downloads"]
 visible = false
 z_index = 120
-offset_left = 134.0
-offset_top = 300.0
-offset_right = 311.0
-offset_bottom = 364.0
+offset_left = 150.0
+offset_top = 284.0
+offset_right = 346.0
+offset_bottom = 379.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_rtgkt")
 text = "File 2
 "
+flat = true
 
 [node name="F2 process" type="Label" parent="Downloads/File 2"]
 layout_mode = 1
@@ -1365,21 +1417,26 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -40.0
+offset_left = 27.0
 offset_top = -11.5
-offset_bottom = 11.5
+offset_right = 96.0
+offset_bottom = 36.5
 grow_horizontal = 0
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("69_kgm7n")
+theme_override_font_sizes/font_size = 32
 text = "0%"
 
 [node name="File 3" type="Button" parent="Downloads"]
 visible = false
 z_index = 120
-offset_left = 134.0
-offset_top = 390.0
-offset_right = 311.0
-offset_bottom = 454.0
+offset_left = 150.0
+offset_top = 438.0
+offset_right = 343.0
+offset_bottom = 532.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_eshay")
 text = "File 3"
+flat = true
 
 [node name="F3 process" type="Label" parent="Downloads/File 3"]
 layout_mode = 1
@@ -1388,11 +1445,14 @@ anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = -40.0
+offset_left = 30.0
 offset_top = -11.5
-offset_bottom = 11.5
+offset_right = 99.0
+offset_bottom = 36.5
 grow_horizontal = 0
 grow_vertical = 2
+theme_override_fonts/font = ExtResource("69_kgm7n")
+theme_override_font_sizes/font_size = 32
 text = "0%"
 
 [node name="File1sprite" type="AnimatedSprite2D" parent="Downloads"]
@@ -1404,6 +1464,24 @@ sprite_frames = SubResource("SpriteFrames_i0i0m")
 animation = &"idle"
 autoplay = "idle"
 frame_progress = 0.1622728
+
+[node name="File2sprite" type="AnimatedSprite2D" parent="Downloads"]
+visible = false
+z_index = 121
+texture_filter = 1
+position = Vector2(246, 332)
+sprite_frames = SubResource("SpriteFrames_i0i0m")
+animation = &"idle"
+autoplay = "idle"
+
+[node name="File3sprite" type="AnimatedSprite2D" parent="Downloads"]
+visible = false
+z_index = 121
+texture_filter = 1
+position = Vector2(246, 486)
+sprite_frames = SubResource("SpriteFrames_i0i0m")
+animation = &"idle"
+autoplay = "idle"
 
 [node name="Tasks" type="Node" parent="."]
 script = ExtResource("43_bxs6h")
@@ -1487,22 +1565,17 @@ animation = &"Close"
 [node name="BG" type="Sprite2D" parent="BG"]
 z_index = 1
 texture_filter = 1
-position = Vector2(570.43744, 274.125)
-scale = Vector2(0.89031243, 0.8903125)
-texture = ExtResource("70_n44lc")
-
-[node name="GR" type="Sprite2D" parent="BG"]
-position = Vector2(578.43744, 766.125)
-scale = Vector2(1.0106249, 1.010625)
-texture = ExtResource("71_a8b36")
+position = Vector2(557.99994, 376.00003)
+scale = Vector2(0.9464061, 0.9464062)
+texture = ExtResource("109_rtgkt")
 
 [node name="Wire1" type="Parallax2D" parent="BG"]
 scroll_scale = Vector2(1.5, 1.5)
 
 [node name="Wires" type="Sprite2D" parent="BG/Wire1"]
-z_index = 30
+z_index = 60
 texture_filter = 1
-position = Vector2(571.43744, 337.00006)
+position = Vector2(571.43744, 355.00006)
 scale = Vector2(0.90875, 0.90875)
 texture = ExtResource("101_kpttb")
 
@@ -1510,9 +1583,17 @@ texture = ExtResource("101_kpttb")
 scroll_scale = Vector2(1.2, 1.2)
 
 [node name="Wires2" type="Sprite2D" parent="BG/Wire2"]
-z_index = 25
-position = Vector2(596.43744, 362)
+z_index = 40
+texture_filter = 1
+position = Vector2(596.43744, 372)
 texture = ExtResource("102_cmc7d")
+
+[node name="Table" type="Sprite2D" parent="BG"]
+z_index = 60
+texture_filter = 1
+position = Vector2(575, 345)
+scale = Vector2(0.94375, 0.94375)
+texture = ExtResource("112_rtgkt")
 
 [connection signal="button_down" from="Power/Powersupply" to="Power" method="_on_powersupply_button_down"]
 [connection signal="button_up" from="Power/Powersupply" to="Power" method="_on_powersupply_button_up"]

@@ -28,7 +28,7 @@ func _process(delta: float) -> void:
 		
 	
 	time += delta
-	if time >= 10.0 and attack == false:
+	if time >= 4.0 and attack == false:
 		move_chance = (randi_range(1, aggresion))
 		if move_chance == 1:
 			attack = true

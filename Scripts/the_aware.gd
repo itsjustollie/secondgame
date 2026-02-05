@@ -32,7 +32,7 @@ func _process(delta: float) -> void:
 		aware_sprite.animation = "Hide"
 		
 	time += delta
-	if time >= 7.0 and attack == false:
+	if time >= 2.0 and attack == false:
 		move_chance = (randi_range(1, aggresion))
 		if move_chance == 1:
 			if stage == "Stage1":
@@ -43,6 +43,8 @@ func _process(delta: float) -> void:
 				stage = "Stage3"
 				time = 0.0
 				attack = true
+		else:
+			time = 0.0
 	
 	if attack == true:
 		kill_time = (randi_range(8, 13))

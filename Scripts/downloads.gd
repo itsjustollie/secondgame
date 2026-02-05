@@ -7,9 +7,11 @@ extends Node
 
 @onready var f_2_process: Label = $"File 2/F2 process"
 @onready var file_2: Button = $"File 2"
+@onready var file_2_sprite: AnimatedSprite2D = $File2sprite
 
 @onready var f_3_process: Label = $"File 3/F3 process"
 @onready var file_3: Button = $"File 3"
+@onready var file_3_sprite: AnimatedSprite2D = $File3sprite
 
 
 var lengthtime = 0.1
@@ -37,9 +39,11 @@ func _process(delta: float) -> void:
 		
 		f_2_process.hide()
 		file_2.hide()
+		file_2_sprite.hide()
 		
 		f_3_process.hide()
 		file_3.hide()
+		file_3_sprite.hide()
 		
 	else:
 		f_1_process.show()
@@ -48,9 +52,11 @@ func _process(delta: float) -> void:
 		
 		f_2_process.show()
 		file_2.show()
+		file_2_sprite.show()
 		
 		f_3_process.show()
 		file_3.show()
+		file_3_sprite.show()
 		
 		
 	
@@ -101,14 +107,18 @@ func _on_file_1_button_up() -> void:
 #file 2
 func _on_file_2_button_down() -> void:
 	f2on = true
+	file_2_sprite.play("Pressed")
 
 func _on_file_2_button_up() -> void:
 	f2on = false
+	file_2_sprite.play("idle")
 
 
 #file 3
 func _on_file_3_button_down() -> void:
 	f3on = true
+	file_3_sprite.play("Pressed")
 
 func _on_file_3_button_up() -> void:
 	f3on = false
+	file_3_sprite.play("idle")
