@@ -13,7 +13,7 @@ func _on_h_1_pressed() -> void:
 	Aggresion.stall_ag = 40000000
 	Aggresion.crook_ag = 1000000
 	Aggresion.false_ag = 5000000000
-	Aggresion.aware_ag = 6
+	Aggresion.aware_ag = 5
 	
 	get_tree().change_scene_to_file("res://Scenes/Night.tscn")
 
@@ -38,7 +38,7 @@ func _on_h_4_pressed() -> void:
 	Aggresion.stall_ag = 3
 	Aggresion.crook_ag = 5
 	Aggresion.false_ag = 5
-	Aggresion.aware_ag = 4
+	Aggresion.aware_ag = 3
 	
 	get_tree().change_scene_to_file("res://Scenes/Night.tscn")
 
@@ -47,7 +47,7 @@ func _on_h_5_pressed() -> void:
 	Aggresion.stall_ag = 3
 	Aggresion.crook_ag = 4
 	Aggresion.false_ag = 5
-	Aggresion.aware_ag = 3
+	Aggresion.aware_ag = 2
 	
 	get_tree().change_scene_to_file("res://Scenes/Night.tscn")
 	
